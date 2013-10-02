@@ -43,8 +43,9 @@ gem 'twitter-bootswatch-rails', '~> 3.0.0'
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+#heroku
+gem 'rails_12factor', group: :production
+Use ActiveModel has_secure_passwordgem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
