@@ -23,6 +23,11 @@
 		</ul>
 		</li>
 	  </ul>
+	  <% if current_user %>
+		<ul class="nav navbar-right">
+		  <li><%= link_to current_user.name, current_user %></li>
+		</ul>
+	  <% else %>
 	  <form class="navbar-form navbar-right">
 		<a type="input" data-toggle="modal" 
 		  href="#myModal" 
@@ -31,6 +36,7 @@
 		  href="#addNewModal"
 		  class="btn btn-default"> Sign In</a>
 	  </form>
+	  <% end %>
 	</div><!--/.nav-collapse -->
   </div>
 </div>
