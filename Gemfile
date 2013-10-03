@@ -48,6 +48,18 @@ gem 'rails_12factor', group: :production
 #Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+# Debugging tools
+group :development, :staging do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'letter_opener'
+  gem 'mail_view'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-remote'
+  gem 'quiet_assets'
+  gem 'sextant'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'
