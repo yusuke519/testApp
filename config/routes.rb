@@ -1,7 +1,11 @@
 TestApp::Application.routes.draw do
+  get "sessions/new"
   resources :users
 
   resources :posts
+  get "pages/top"
+  get "pages/map"
+  root 'pages#top'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
