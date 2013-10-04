@@ -61,6 +61,8 @@ group :development, :staging do
   gem 'sextant'
 end
 
+# active recordを使う
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 # Use unicorn as the app server
 # gem 'unicorn'
 
