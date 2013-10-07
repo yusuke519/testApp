@@ -14,5 +14,6 @@ class SessionsController < ApplicationController
  
   def destroy
     session[:user_id] = nil
+	render "pages/top"
   end
 end
