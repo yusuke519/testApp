@@ -61,8 +61,13 @@ group :development, :staging do
   gem 'sextant'
 end
 
+<<<<<<< HEAD
+# active recordを使う
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+=======
 #devise
 gem 'devise', "3.0.0rc"
+>>>>>>> master
 # Use unicorn as the app server
 # gem 'unicorn'
 
