@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+		session[:user_id] = nil
 		session[:user_id] = @user
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
@@ -60,6 +61,12 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def register
+	
+
   end
 
   private

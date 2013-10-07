@@ -61,6 +61,8 @@ group :development, :staging do
   gem 'sextant'
 end
 
+#devise
+gem 'devise', "3.0.0rc"
 # Use unicorn as the app server
 # gem 'unicorn'
 
