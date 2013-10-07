@@ -26,14 +26,20 @@
 	  <% if current_user %>
 		<ul class="nav navbar-right">
 		  <li><%= link_to current_user.name, current_user %></li>
+		  <li><%= link_to "Sign Out", signout_path %></li>
 		</ul>
+		<from>
+		<a type="input" 
+		  href="/signout"
+		  class="btn btn-default"> Sign Out</a>
+	 	</form>
 	  <% else %>
 	  <form class="navbar-form navbar-right">
 		<a type="input"  
 		  href="/signup" 
 		  class="btn btn-primary"> Sign Up</a>
-		<a type="input" data-toggle="modal"
-		  href="#addNewModal"
+		<a type="input" 
+		  href="/signin"
 		  class="btn btn-default"> Sign In</a>
 	  </form>
 	  <% end %>
