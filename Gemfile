@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -60,13 +61,8 @@ group :development, :staging do
   gem 'sextant'
 end
 
-<<<<<<< HEAD
 # active recordを使う
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
-=======
-#devise
-gem 'devise', "3.0.0rc"
->>>>>>> master
 # Use unicorn as the app server
 # gem 'unicorn'
 
