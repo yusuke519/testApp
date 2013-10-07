@@ -9,6 +9,7 @@ TestApp::Application.routes.draw do
   get 'signup' => 'users#new', :as => :signup
   get 'signin' => 'sessions#new', :as => :signin
   get 'signout' => 'sessions#destroy', :as => :signout
+  post 'register' => 'users#register', :as => :register
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
