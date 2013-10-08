@@ -46,6 +46,7 @@ class UsersController < ApplicationController
   def register_post
 	logger.debug("register post")
 	logger.debug(params)
+	render :text =>"test"
   end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
