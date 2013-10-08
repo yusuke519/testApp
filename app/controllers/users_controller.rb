@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   def register_post
 	#render :text => params
 #	render :text => params[:name]
-    @user = User.new(user_params_for_android)
+    @user = User.new(user_params)
     logger.debug("register post")
     logger.debug(params)
       if @user.save
@@ -89,6 +89,8 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+
+	# Androidの方でHashを上手くパラメータに指定できないのでこうしておく
     def user_params_for_android
       params.permit(:name, :email, :password, :password_confirmation)
     end
