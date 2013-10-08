@@ -44,8 +44,8 @@ class UsersController < ApplicationController
   end
 
   def register_post
-	put 'register post'
-	put params
+	logger.debug("register post")
+	logger.debug(params)
   end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
