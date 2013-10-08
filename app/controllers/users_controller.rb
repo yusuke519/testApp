@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   def register_post
 	#render :text => params
 #	render :text => params[:name]
-    @user = User.new(user_params)
+    @user = User.new(user_params_for_android)
     logger.debug("register post")
     logger.debug(params)
       if @user.save
