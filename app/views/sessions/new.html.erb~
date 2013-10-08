@@ -10,7 +10,8 @@
     </div>
     <div class="password">
       <%= label_tag :password %>
-      <%= password_field_tag :password %>
+	  <%= password_field_tag :password %>
+	  <input type="password">
     </div>
     <div class="submit">
       <%= submit_tag %>

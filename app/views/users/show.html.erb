@@ -1,24 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class='row'>
+		<div class='col-sm-4'>
+			<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+			<p>
+			<strong>Name:</strong>
+			<%= @user.name %>
+			</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+			<p>
+			<strong>Email:</strong>
+			<%= @user.email %>
+			</p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+			<p>
+			<strong>Password:</strong>
+			<%= @user.password %>
+			</p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+			<p>
+			<strong>Password digest:</strong>
+			<%= @user.password_digest %>
+			</p>
+		</div>
+		<div class='col-sm-8'>
+			<h1>Right Column</h1>
+		</div>
+	</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
+
+</div>
