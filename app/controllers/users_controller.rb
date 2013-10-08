@@ -44,9 +44,14 @@ class UsersController < ApplicationController
   end
 
   def register_post
+    @user = User.new(user_params)
 	logger.debug("register post")
 	logger.debug(params)
-	render :text =>"test"
+      if @user.save
+		  render :text =>"Success"
+      else
+		  render :text =>"Faile"
+      end
   end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
