@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   end
 
   def register_post
-	render params
+	#render :text => params
     #@user = User.new(user_params)
 	#logger.debug("register post")
 	#logger.debug(params)
