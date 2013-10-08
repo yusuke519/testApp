@@ -39,6 +39,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def register
+	
+  end
+
+  def register_post
+	
+  end
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
