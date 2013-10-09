@@ -11,6 +11,7 @@ TestApp::Application.routes.draw do
   get 'signout' => 'sessions#destroy', :as => :signout
   get 'register' => 'users#register', :as => :register
   post 'register' => 'users#register_post', :as => :register_post
+  post 'data' => 'users#set_data', :as => :data
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

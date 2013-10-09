@@ -55,6 +55,11 @@ class UsersController < ApplicationController
     	  render :text =>"Faile"
       end
   end
+
+  def set_data
+	render :text => "Success"
+  end
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
