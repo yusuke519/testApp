@@ -60,8 +60,6 @@ class UsersController < ApplicationController
 	render :text => "Success"
   end
 
-
-
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

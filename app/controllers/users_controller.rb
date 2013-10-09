@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token ,:only=>[:register_post]
+  skip_before_filter :verify_authenticity_token ,:only=>[:register_post, :set_data]
   # GET /users
   # GET /users.json
   def index
