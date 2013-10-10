@@ -4,10 +4,11 @@ class StreamsController < ApplicationController
 	def index
 		@streams = Stream.all
 	end
+
 	def create
 		@stream = Stream.new
 		if @stream.save
-			render :text => "Success"
+			render :text => "#{@stream.id}"
 		else
 			render :text => "Fail"
 		end
