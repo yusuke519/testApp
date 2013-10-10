@@ -7,8 +7,7 @@ class StreamsController < ApplicationController
 
 	def show
 		@stream = Stream.find(params[:id]);
-	end
-
+	end 
 	def create
 		@stream = Stream.new
 		if @stream.save
