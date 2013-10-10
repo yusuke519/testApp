@@ -13,9 +13,9 @@ TestApp::Application.routes.draw do
   post 'register' => 'users#register_post', :as => :register_post
   post 'data' => 'users#set_data', :as => :data
   
-  get 'streams' => 'streams#index', :as => :streams
-  post 'streams' => 'streams#create', :as => :streams
-  
+  get 'streams' => 'streams#index'
+  post 'streams' => 'streams#create' 
+
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
