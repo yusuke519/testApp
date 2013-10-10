@@ -1,5 +1,5 @@
 class StreamsController < ApplicationController
-	skip_before_filter :verify_authenticity_token ,:only=>[:register_post, :set_data]
+	skip_before_filter :verify_authenticity_token ,:only=>[:create]
 
 	def index
 		@streams = Stream.all
