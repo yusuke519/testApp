@@ -1,0 +1,22 @@
+<div class='container'>
+	<h1>Listing streams</h1>
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>id</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @streams.each do |stream| %>
+				<tr>
+					<td><%= stream.id %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<br>
+
+</div>
