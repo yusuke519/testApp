@@ -14,6 +14,7 @@ TestApp::Application.routes.draw do
   post 'data' => 'users#set_data', :as => :data
   
   get 'streams' => 'streams#index'
+  get 'streams/:id' => 'streams#show'
   post 'streams' => 'streams#create' 
   post 'streams/set' => 'streams#set_data' 
 

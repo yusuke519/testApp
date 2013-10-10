@@ -5,6 +5,10 @@ class StreamsController < ApplicationController
 		@streams = Stream.all
 	end
 
+	def show
+		@stream = Stream.find(params[:id]);
+	end
+
 	def create
 		@stream = Stream.new
 		if @stream.save
