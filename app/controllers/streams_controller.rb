@@ -39,6 +39,7 @@ class StreamsController < ApplicationController
 	def addAcce(dp, data)
 		dataAry = Array.new()
 		sequence = 0
+		temp = Array.new()
 		data.split(' ').each{|point|
 			temp == point.split(',')
 			t = temp[0]
