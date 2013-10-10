@@ -14,9 +14,15 @@ class StreamsController < ApplicationController
 		end
 	end
 
-	def add_data
+	def set_data
 		@stream = Stream.find(params[:stream_id])
 		@data_point = @stream.data_points.create(data_point_param)
+
+		if @data_point.save
+			render :text => "Success"
+		else
+			render :text => "Fail"
+		end
 	end
 
 	private
