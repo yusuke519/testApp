@@ -41,7 +41,7 @@ class StreamsController < ApplicationController
 		sequence = 0
 		temp = Array.new()
 		data.split(' ').each{|point|
-			temp == point.split(',')
+			temp = point.split(',')
 			t = temp[0]
 			x = temp[1].to_f
 			y = temp[2].to_f
