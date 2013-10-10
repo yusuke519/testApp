@@ -15,6 +15,7 @@ TestApp::Application.routes.draw do
   
   get 'streams' => 'streams#index'
   post 'streams' => 'streams#create' 
+  post 'streams/set' => 'streams#set_data' 
 
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
