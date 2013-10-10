@@ -23,6 +23,7 @@ class StreamsController < ApplicationController
 		@data_point = @stream.data_points.create(data_point_param)
 
 		if @data_point.save
+			addAcce(@data_point, params[:data])
 			render :text => "Success"
 		else
 			render :text => "Fail"
@@ -33,6 +34,20 @@ class StreamsController < ApplicationController
 	#本当はモデルの機能として持たせるべきな気がする
 	def decodeData
 
+	end
+
+	def addAcce(dp, data)
+		dataAry = Array.new()
+		sequence = 0
+		data.split(' ').each{|point|
+			temp == point.split(',')
+			t = temp[0]
+			x = temp[1].to_f
+			y = temp[2].to_f
+			z = temp[3].to_f
+			dp.accelerations.create(:sequence => sequence, :time => t, :x => x, :y => y, :z => z)
+			sequence = sequence + 1
+		}
 	end
 
 
