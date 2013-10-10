@@ -104,9 +104,9 @@ window.onload = function() {
         var str;
         str = evt.target.result;
         if (target === "colorFile") {
-          colorData = str.split("\n");
+          colorData = str.split("¥n");
         } else {
-          latlngData = str.split("\n");
+          latlngData = str.split("¥n");
         }
         if (colorData && latlngData) {
           return fileJS.draw();
@@ -157,7 +157,7 @@ window.onload = function() {
         toTime = elm[1];
 		
 		//color = '#';
-		//colorをrgb(r,g,b)の形で表現する
+		//color繧池gb(r,g,b)縺ｮ蠖｢縺ｧ陦ｨ迴ｾ縺吶ｋ
         color = "rgb(";
 
 		color += Math.floor(parseFloat(elm[2]));
@@ -166,6 +166,21 @@ window.onload = function() {
 		color += ',';
 		color += Math.floor(parseFloat(elm[4]));
 		color += ')';
+        //if (elm[2] === "0") {
+        //  color += elm[2];
+        //} else {
+        //  color += "f";
+        //}
+        //if (elm[3] === "0") {
+        //  color += elm[3];
+        //} else {
+        //  color += "f";
+        //}
+        //if (elm[4] === "0") {
+        //  color += elm[4];
+        //} else {
+        //  color += "f";
+        //}
         from = fileJS.getLatlng(fromTime);
         to = fileJS.getLatlng(toTime);
         _results.push(mapJS.drawLine(from, to, color));
