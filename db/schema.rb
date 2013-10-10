@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010055400) do
+ActiveRecord::Schema.define(version: 20131010075950) do
+
+  create_table "accelerations", force: true do |t|
+    t.integer  "sequence"
+    t.string   "time"
+    t.float    "x"
+    t.float    "y"
+    t.float    "z"
+    t.string   "data_point_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "data_points", force: true do |t|
+    t.string   "start_time"
+    t.string   "stop_time"
+    t.string   "data_type"
+    t.string   "stream_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"

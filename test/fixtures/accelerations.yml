@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sequence: 1
+  time: MyString
+  x: 1.5
+  'y': 1.5
+  z: 1.5
+  data_point_id: MyString
+
+two:
+  sequence: 1
+  time: MyString
+  x: 1.5
+  'y': 1.5
+  z: 1.5
+  data_point_id: MyString
