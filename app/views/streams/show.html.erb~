@@ -29,7 +29,8 @@
 			}
 			]
 		}
-		var ctx = $("#myChart").get(0).getContext("2d");
+		var ctx = document.getElementById("myChart").getContext("2d");
+		//var ctx = $("#myChart").get(0).getContext("2d");
 		//
 		//var data={
 		//	labels:gon.t,
