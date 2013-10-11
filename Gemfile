@@ -71,3 +71,8 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+#
+
+# Gon:Rails（Controller上）のデータとJSでデータを共有する
+gem 'gon'

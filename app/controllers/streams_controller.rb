@@ -7,6 +7,7 @@ class StreamsController < ApplicationController
 
 	def show
 		@stream = Stream.find(params[:id]);
+		gon.test = 'TEST'
 	end 
 	def create
 		@stream = Stream.new
