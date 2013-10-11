@@ -5,7 +5,7 @@
 	</div>
 </div>
 
-<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+<%= javascript_include_tag "Chart" %>
 <script>
 	$(document).ready(function(){
 		alert(gon.test);
@@ -45,6 +45,7 @@
 		//	]
 		//}
 
-		var myLine = new Chart(ctx).Line(data,Line.defaults);
+	var myChart = new Chart(ctx);
+	myChart.Line(data,Line.defaults);
 	})
 </script>
