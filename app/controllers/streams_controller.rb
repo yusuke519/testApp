@@ -6,7 +6,13 @@ class StreamsController < ApplicationController
 	end
 
 	def show
-		@stream = Stream.find(params[:id]);
+		@stream = Stream.find(params[:id])
+		@dataPoints = @stream.data_points
+		@dataPoints.each{|dp|
+			@acce = dp.accelerations
+		}
+		x = Array.new()
+		t = Array.new()
 		gon.test = 'TEST'
 	end 
 	def create
