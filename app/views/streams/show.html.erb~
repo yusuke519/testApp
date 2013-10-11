@@ -10,6 +10,7 @@
 	$(document).ready(function(){
 		alert(gon.test);
 		alert(gon.x);
+		temp = [65,59,90,81,56,55,40]
 		var data = {
 			labels : ["January","February","March","April","May","June","July"],
 			datasets : [
@@ -48,5 +49,6 @@
 	var myChart = new Chart(ctx);
 	myChart.Line(data);
 	alert(dataTest.labels);
+	alert(gon.temp_x);
 	})
 </script>
