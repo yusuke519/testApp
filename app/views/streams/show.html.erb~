@@ -47,7 +47,6 @@
 		}
 	var myChart = new Chart(ctx);
 	myChart.Line(data);
-	alert(dataTest.labels);
 	alert(gon.temp_x);
 	alert(temp)
 	})
