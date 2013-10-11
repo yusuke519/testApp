@@ -18,6 +18,7 @@ class StreamsController < ApplicationController
 			gon.test = 'OK'
 		}
 		gon.x = x
+		gon.t = t
 	end 
 	def create
 		@stream = Stream.new
