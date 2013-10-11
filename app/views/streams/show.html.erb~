@@ -45,6 +45,6 @@
 		//	]
 		//}
 
-		new Chart(ctx).Line(data,Line.defaults);
+		var myLine = new Chart(ctx).Line(data,Line.defaults);
 	})
 </script>
