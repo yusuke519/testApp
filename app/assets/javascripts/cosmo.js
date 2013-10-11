@@ -4,4 +4,4 @@
 //= require jquery_ujs
 //= require cosmo/loader
 //= require cosmo/bootswatch
-//= require chart
+//= require Chart
