@@ -1,4 +1,4 @@
-<%= javascript_include_tag "Chart" %>
+<%= javascript_include_tag "map" %>
 <div class="container">
 	<h1> SHOW TEST </h1>
 	<div class="test">
