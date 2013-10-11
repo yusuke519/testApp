@@ -23,7 +23,7 @@ class StreamsController < ApplicationController
 		temp_x = x[0..9]
 		temp_t = t[0..9]
 		gon.temp_x = temp_x
-		gon.temp_y = temp_y
+		gon.temp_t = temp_t
 		gon.x = x
 		gon.t = t
 	end 

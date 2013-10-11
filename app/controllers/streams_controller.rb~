@@ -20,8 +20,8 @@ class StreamsController < ApplicationController
 			t << @acces.pluck(:time)
 			gon.test = 'OK'
 		}
-		temp_x = x(0..9)
-		temp_t = t(0..9)
+		temp_x = x[0..9]
+		temp_t = t[0..9]
 		gon.temp_x = temp_x
 		gon.temp_y = temp_y
 		gon.x = x
