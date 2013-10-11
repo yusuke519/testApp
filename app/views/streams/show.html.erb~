@@ -1,7 +1,7 @@
 <div class="container">
 	<h1> SHOW TEST </h1>
 	<div class="test">
-		<canvas id="myChart" width="400" height="400"></canvas>
+		<canvas id="myChart" width="1200" height="400"></canvas>
 	</div>
 </div>
 
@@ -32,20 +32,21 @@
 		var ctx = document.getElementById("myChart").getContext("2d");
 		//var ctx = $("#myChart").get(0).getContext("2d");
 		//
-		//var data={
-		//	labels:gon.t,
-		//	datasets:[
-		//	{
-		//		fillColor:"rgba(220,220,220,0.5)",
-		//		strokeColor:"rgba(220,220,220,1)",
-		//		pointColor:"rgba(220,220,220,1)",
-		//		pointStrokeColor:"#fff",
-		//		data:gon.x
-		//	}
-		//	]
-		//}
+		var dataTest={
+			labels:gon.t,
+			datasets:[
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : gon.x
+			}
+			]
+		}
 
 	var myChart = new Chart(ctx);
 	myChart.Line(data);
+	alert(dataTest.datasets);
 	})
 </script>
