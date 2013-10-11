@@ -77,5 +77,3 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 # Gon:Rails（Controller上）のデータとJSでデータを共有する
 gem 'gon'
 
-# Chart.js for Rails
-gem 'chart-js-rails'
