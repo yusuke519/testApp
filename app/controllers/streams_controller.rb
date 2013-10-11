@@ -8,11 +8,14 @@ class StreamsController < ApplicationController
 	def show
 		@stream = Stream.find(params[:id])
 		@dataPoints = @stream.data_points
-		@dataPoints.each{|dp|
-			@acce = dp.accelerations
-		}
 		x = Array.new()
 		t = Array.new()
+		@dataPoints.each{|dp|
+			@acces = dp.accelerations
+			x << @acces.pluck(:x)
+			t << @acces.pluck(:time)
+		}
+		gon.x = x
 		gon.test = 'TEST'
 	end 
 	def create
