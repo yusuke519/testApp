@@ -10,13 +10,14 @@ class StreamsController < ApplicationController
 		@dataPoints = @stream.data_points
 		x = Array.new()
 		t = Array.new()
+		gon.test = 'NG'
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
 			x << @acces.pluck(:x)
 			t << @acces.pluck(:time)
+			gon.test = 'OK'
 		}
 		gon.x = x
-		gon.test = 'TEST'
 	end 
 	def create
 		@stream = Stream.new
