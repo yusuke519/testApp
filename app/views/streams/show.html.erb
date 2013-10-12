@@ -110,7 +110,6 @@
 		var ctx = document.getElementById("myChart").getContext("2d"); 
 		new Chart(ctx).Line(data,option);
 
-
 		//統計量の記述
 		//alert("Max of x is " + Math.max.apply(null, gon.x));
 		//alert("Min of x is " + Math.min.apply(null, gon.x));
@@ -135,7 +134,7 @@
 	
 		$("#time_data").find(".max").text("Max: " + Math.max.apply(null, gon.t));
 		$("#time_data").find(".min").text("Min: " + Math.min.apply(null, gon.t));
-		statistics = average(gon.t);
+		statistics = average(subtime(gon.t));
 		$("#time_data").find(".ave").text("Ave: " + statistics[0]);
 		$("#time_data").find(".std").text("Std: " + statistics[1]);
 	});
@@ -148,7 +147,16 @@
 		for(i=0; i<data.length;i++){
 			varia = varia + Math.pow(data[i] - ave, 2);
 		}
+		varia = varia/(data.length-1);
 
 		return [ave, Math.sqrt(varia,2)];
+	}
+	function subtime(data){
+		var st = Array.new(data.length-1);
+		for(i=0; i<data.length-1; i++){
+			st.push(data[i+1] - data[i]);
+		}
+
+		return st;
 	}
 </script>
