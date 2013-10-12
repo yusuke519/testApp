@@ -10,9 +10,12 @@ class StreamsController < ApplicationController
 		@dataPoints = @stream.data_points
 		x = Array.new()
 		y = Array.new()
+		z = Arraz.new()
 		t = Array.new()
 
 		temp_x = Array.new()
+		temp_y = Array.new()
+		temp_z = Arraz.new()
 		temp_t = Array.new()
 		gon.test = 'NG'
 		@dataPoints.each{|dp|
@@ -20,6 +23,7 @@ class StreamsController < ApplicationController
 			@acces.each{|acce|
 				x << acce.x
 				y << acce.y
+				z << acce.z
 				t << acce.time
 			}
 			#x << @acces.pluck(:x)
@@ -28,9 +32,11 @@ class StreamsController < ApplicationController
 		}
 		temp_x = x[0..6]
 		temp_y = y[0..6]
+		temp_z = z[0..6]
 		temp_t = t[0..6]
 		gon.temp_x = temp_x
 		gon.temp_y = temp_y
+		gon.temp_z = temp_z
 		gon.temp_t = temp_t
 		gon.x = x
 		gon.y = y

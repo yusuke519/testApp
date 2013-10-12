@@ -77,3 +77,7 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 # Gon:Rails（Controller上）のデータとJSでデータを共有する
 gem 'gon'
 
+# Highchart.jsを使用可能に
+gem 'lazy_high_charts'
+
+
