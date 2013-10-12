@@ -35,7 +35,6 @@
 				pointColor : "rgba(151,187,205,1)",
 				pointStrokeColor : "#fff",
 				data : gon.temp_z
-
 			}
 			] 
 		} 
