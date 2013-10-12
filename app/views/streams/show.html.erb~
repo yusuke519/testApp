@@ -34,11 +34,8 @@
 		} 
 		var option{
 			pointDot:false
-			
-			
-			
 		}
 		var ctx = document.getElementById("myChart").getContext("2d"); 
-		new Chart(ctx).Line(data);
+		new Chart(ctx).Line(data,option);
 	});
 </script>
