@@ -78,6 +78,4 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'gon'
 
 # Highchart.jsを使用可能に
-gem 'lazy_high_charts'
-
-
+# gem 'lazy_high_charts'
