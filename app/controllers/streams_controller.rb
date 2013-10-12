@@ -9,9 +9,11 @@ class StreamsController < ApplicationController
 		@stream = Stream.find(params[:id])
 		@dataPoints = @stream.data_points
 		x = Array.new()
+		y = Array.new()
 		t = Array.new()
 
 		temp_x = Array.new()
+		temp_y = Array.new()
 		temp_t = Array.new()
 		gon.test = 'NG'
 		@dataPoints.each{|dp|

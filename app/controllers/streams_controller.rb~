@@ -9,6 +9,7 @@ class StreamsController < ApplicationController
 		@stream = Stream.find(params[:id])
 		@dataPoints = @stream.data_points
 		x = Array.new()
+		y = Array.new()
 		t = Array.new()
 
 		temp_x = Array.new()
@@ -32,6 +33,7 @@ class StreamsController < ApplicationController
 		gon.temp_y = temp_y
 		gon.temp_t = temp_t
 		gon.x = x
+		gon.y = y
 		gon.t = t
 	end 
 	def create
