@@ -8,12 +8,12 @@
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">Time Data</div>
-				<div class="panel-body">
+				<div id='x data'class="panel-body">
 					<ul>
-						<li>Max:<p>test</p></li>
-						<li>Min:</li>
-						<li>Ave:</li>
-						<li>Std:</li>
+						<li class='max'>Max:</li>
+						<li class='min'>Min:</li>
+						<li class='ave'>Ave:</li>
+						<li class='std'>Std:</li>
 					</ul>
 				</div>
 			</div>
