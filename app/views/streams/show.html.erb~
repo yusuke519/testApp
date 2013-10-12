@@ -7,7 +7,7 @@
 	<div id='dataField' class='row'>
 		<div class="col-md-3">
 			<div class="panel panel-default">
-				<div class="panel-heading">Time Data</div>
+				<div class="panel-heading">X Data</div>
 				<div id='x_data'class="panel-body">
 					<ul>
 						<li class='max'>Max:</li>
@@ -20,20 +20,41 @@
 		</div>
 		<div class="col-md-3">
 			<div class="panel panel-default">
-				<div class="panel-heading">Time Data</div>
-				<div class="panel-body">Test</div>
+				<div class="panel-heading">Y Data</div>
+				<div id='y_data'class="panel-body">
+					<ul>
+						<li class='max'>Max:</li>
+						<li class='min'>Min:</li>
+						<li class='ave'>Ave:</li>
+						<li class='std'>Std:</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Z Data</div>
+				<div id='z_data'class="panel-body">
+					<ul>
+						<li class='max'>Max:</li>
+						<li class='min'>Min:</li>
+						<li class='ave'>Ave:</li>
+						<li class='std'>Std:</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">Time Data</div>
-				<div class="panel-body">Test</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-heading">Time Data</div>
-				<div class="panel-body">Test</div>
+				<div id='time_data'class="panel-body">
+					<ul>
+						<li class='max'>Max:</li>
+						<li class='min'>Min:</li>
+						<li class='ave'>Ave:</li>
+						<li class='std'>Std:</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -89,9 +110,20 @@
 		var ctx = document.getElementById("myChart").getContext("2d"); 
 		new Chart(ctx).Line(data,option);
 
-		alert("Max of x is " + Math.max.apply(null, gon.x));
-		alert("Min of x is " + Math.min.apply(null, gon.x));
 
-		var element = $("#x_data")
+		//統計量の記述
+		//alert("Max of x is " + Math.max.apply(null, gon.x));
+		//alert("Min of x is " + Math.min.apply(null, gon.x));
+		$("#x_data").find(".max").text("Max: " + Math.max.apply(null, gon.x));
+		$("#x_data").find(".min").text("Min: " + Math.min.apply(null, gon.x));
+	
+		$("#y_data").find(".max").text("Max: " + Math.max.apply(null, gon.y));
+		$("#y_data").find(".min").text("Min: " + Math.min.apply(null, gon.y));
+		
+		$("#z_data").find(".max").text("Max: " + Math.max.apply(null, gon.z));
+		$("#z_data").find(".min").text("Min: " + Math.min.apply(null, gon.z));
+	
+		$("#time_data").find(".max").text("Max: " + Math.max.apply(null, gon.t));
+		$("#time_data").find(".min").text("Min: " + Math.min.apply(null, gon.t));
 	});
 </script>
