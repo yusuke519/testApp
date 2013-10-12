@@ -17,14 +17,14 @@
 			datasets : [
 			{
 				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(7,142,145,1)",
+				strokeColor : "rgba(123,150,221,1)",
 				pointColor : "rgba(220,220,220,1)",
 				pointStrokeColor : "#fff",
 				data : gon.temp_x
 			},
 			{
 				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(162,124,161,1)",
+				strokeColor : "rgba(226,149,21,1)",
 				pointColor : "rgba(220,220,220,1)",
 				pointStrokeColor : "#fff",
 				data : gon.temp_y
