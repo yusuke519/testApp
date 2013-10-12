@@ -4,14 +4,20 @@
 		<canvas id="myChart" width="1200" height="500"></canvas>
 	</div>
 
-	<div class='row'>
+	<div id='dataField' class='row'>
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">Time Data</div>
-				<div class="panel-body">Test</div>
+				<div class="panel-body">
+					<ul>
+						<li>Max:</li>
+						<li>Min:</li>
+						<li>Ave:</li>
+						<li>Std:</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">Time Data</div>
