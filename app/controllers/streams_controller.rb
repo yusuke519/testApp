@@ -18,11 +18,12 @@ class StreamsController < ApplicationController
 		temp_z = Array.new()
 		temp_t = Array.new()
 
-		firstTime = '0'
+		firstTime = 0
 		gon.test = 'NG'
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
-			firstTime = @acces.first.time.to_i
+			firstAcce = @acces[0]
+			firstTime = firstAcce.time.to_i
 			@acces.each{|acce|
 				x << acce.x
 				y << acce.y

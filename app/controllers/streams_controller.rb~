@@ -22,12 +22,12 @@ class StreamsController < ApplicationController
 		gon.test = 'NG'
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
-			firstTime = @acces.first.time.to_s
+			firstTime = @acces.first.time.to_i
 			@acces.each{|acce|
 				x << acce.x
 				y << acce.y
 				z << acce.z
-				t << acce.time.to_s - firstTime
+				t << acce.time.to_i - firstTime
 			}
 			#x << @acces.pluck(:x)
 			#t << @acces.pluck(:time)
