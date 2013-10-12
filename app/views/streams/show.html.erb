@@ -131,10 +131,11 @@
 		statistics = average(gon.z);
 		$("#z_data").find(".ave").text("Ave: " + statistics[0]);
 		$("#z_data").find(".std").text("Std: " + statistics[1]);
-	
-		$("#time_data").find(".max").text("Max: " + Math.max.apply(null, gon.t));
-		$("#time_data").find(".min").text("Min: " + Math.min.apply(null, gon.t));
-		statistics = average(subtime(gon.t));
+
+		var st = subtime(gon.t);
+		$("#time_data").find(".max").text("Max: " + Math.max.apply(null, st));
+		$("#time_data").find(".min").text("Min: " + Math.min.apply(null, st));
+		statistics = average(st);
 		$("#time_data").find(".ave").text("Ave: " + statistics[0]);
 		$("#time_data").find(".std").text("Std: " + statistics[1]);
 	});
