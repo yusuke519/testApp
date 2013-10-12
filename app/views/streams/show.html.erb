@@ -153,11 +153,10 @@
 		return [ave, Math.sqrt(varia,2)];
 	}
 	function subtime(data){
-		var st = new Array(data.length-1);
+		var st = new Array();
 		for(i=0; i<data.length-1; i++){
 			st.push(data[i+1] - data[i]);
 		}
-
 		return st;
 	}
 </script>
