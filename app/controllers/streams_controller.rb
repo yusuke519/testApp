@@ -18,6 +18,7 @@ class StreamsController < ApplicationController
 			@acces = dp.accelerations
 			@acces.each{|acce|
 				x << acce.x
+				y << acce.y
 				t << acce.time
 			}
 			#x << @acces.pluck(:x)
@@ -25,10 +26,13 @@ class StreamsController < ApplicationController
 			gon.test = 'OK'
 		}
 		temp_x = x[0..6]
+		temp_y = y[0..6]
 		temp_t = t[0..6]
 		gon.temp_x = temp_x
+		gon.temp_y = temp_y
 		gon.temp_t = temp_t
 		gon.x = x
+		gon.y = y
 		gon.t = t
 	end 
 	def create
