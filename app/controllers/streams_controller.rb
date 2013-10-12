@@ -28,7 +28,7 @@ class StreamsController < ApplicationController
 				x << acce.x
 				y << acce.y
 				z << acce.z
-				t << acce.time.to_i - firstTime
+				t << (acce.time.to_i - firstTime)/1000
 			}
 			#x << @acces.pluck(:x)
 			#t << @acces.pluck(:time)
