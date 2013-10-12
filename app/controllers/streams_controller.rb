@@ -8,15 +8,16 @@ class StreamsController < ApplicationController
 	def show
 		@stream = Stream.find(params[:id])
 		@dataPoints = @stream.data_points
+		
+		#Initialize Array Object
+		#x: data of x axis
+		#y: data of y axis
+		#z: data of z axis
+		#t: time
 		x = Array.new()
 		y = Array.new()
 		z = Array.new()
 		t = Array.new()
-
-		temp_x = Array.new()
-		temp_y = Array.new()
-		temp_z = Array.new()
-		temp_t = Array.new()
 
 		firstTime = 0
 		gon.test = 'NG'
@@ -34,14 +35,6 @@ class StreamsController < ApplicationController
 			#t << @acces.pluck(:time)
 			gon.test = 'OK'
 		}
-		temp_x = x[0..6]
-		temp_y = y[0..6]
-		temp_z = z[0..6]
-		temp_t = t[0..6]
-		gon.temp_x = temp_x
-		gon.temp_y = temp_y
-		gon.temp_z = temp_z
-		gon.temp_t = temp_t
 		gon.x = x
 		gon.y = y
 		gon.z = z
@@ -70,10 +63,6 @@ class StreamsController < ApplicationController
 
 	private
 	#本当はモデルの機能として持たせるべきな気がする
-	def decodeData
-
-	end
-
 	def addAcce(dp, data)
 		dataAry = Array.new()
 		sequence = 0
