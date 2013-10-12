@@ -40,6 +40,7 @@ class StreamsController < ApplicationController
 		gon.temp_t = temp_t
 		gon.x = x
 		gon.y = y
+		gon.z = z
 		gon.t = t
 	end 
 	def create

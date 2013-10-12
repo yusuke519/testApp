@@ -10,12 +10,12 @@ class StreamsController < ApplicationController
 		@dataPoints = @stream.data_points
 		x = Array.new()
 		y = Array.new()
-		z = Arraz.new()
+		z = Array.new()
 		t = Array.new()
 
 		temp_x = Array.new()
 		temp_y = Array.new()
-		temp_z = Arraz.new()
+		temp_z = Array.new()
 		temp_t = Array.new()
 		gon.test = 'NG'
 		@dataPoints.each{|dp|
