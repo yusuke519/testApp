@@ -26,12 +26,12 @@
 				strokeColor : "rgba(151,187,205,1)",
 				pointColor : "rgba(151,187,205,1)",
 				pointStrokeColor : "#fff",
-				data : temp
+				data : gon.temp_y
 
 			}
 			] 
 		} 
 		var ctx = document.getElementById("myChart").getContext("2d"); 
-
+		new Chart(ctx).Line(data);
 	});
 </script>
