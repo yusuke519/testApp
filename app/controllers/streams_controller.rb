@@ -16,8 +16,12 @@ class StreamsController < ApplicationController
 		gon.test = 'NG'
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
-			x << @acces.pluck(:x)
-			t << @acces.pluck(:time)
+			@acces.each{|acce|
+				x << acce.x
+				t << acce.time
+			}
+			#x << @acces.pluck(:x)
+			#t << @acces.pluck(:time)
 			gon.test = 'OK'
 		}
 		temp_x = x[0..6]
