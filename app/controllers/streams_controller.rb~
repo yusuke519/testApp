@@ -39,6 +39,9 @@ class StreamsController < ApplicationController
 		gon.y = y
 		gon.z = z
 		gon.t = t
+
+		#timeの差分を求める
+		subtime = Array.new(t.size()-1)	
 	end 
 	def create
 		@stream = Stream.new

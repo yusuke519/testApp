@@ -39,6 +39,7 @@ class StreamsController < ApplicationController
 		gon.y = y
 		gon.z = z
 		gon.t = t
+
 	end 
 	def create
 		@stream = Stream.new

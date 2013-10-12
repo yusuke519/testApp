@@ -3,7 +3,37 @@
 	<div class="test">
 		<canvas id="myChart" width="1200" height="500"></canvas>
 	</div>
+
+	<div class='row'>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Time Data</div>
+				<div class="panel-body">Test</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Time Data</div>
+				<div class="panel-body">Test</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Time Data</div>
+				<div class="panel-body">Test</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Time Data</div>
+				<div class="panel-body">Test</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+
 
 <%= javascript_include_tag "Chart" %>
 <script>
@@ -54,6 +84,6 @@
 		new Chart(ctx).Line(data,option);
 
 		alert("Max of x is " + Math.max.apply(null, gon.x));
-		alert("Min of x is " + Math.min.apply(null, gon.y));
+		alert("Min of x is " + Math.min.apply(null, gon.x));
 	});
 </script>
