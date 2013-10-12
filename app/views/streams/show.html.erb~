@@ -123,12 +123,21 @@
 	
 		$("#y_data").find(".max").text("Max: " + Math.max.apply(null, gon.y));
 		$("#y_data").find(".min").text("Min: " + Math.min.apply(null, gon.y));
+		statistics = average(gon.y);
+		$("#y_data").find(".ave").text("Ave: " + statistics[0]);
+		$("#y_data").find(".std").text("Std: " + statistics[1]);
 		
 		$("#z_data").find(".max").text("Max: " + Math.max.apply(null, gon.z));
 		$("#z_data").find(".min").text("Min: " + Math.min.apply(null, gon.z));
+		statistics = average(gon.z);
+		$("#z_data").find(".ave").text("Ave: " + statistics[0]);
+		$("#z_data").find(".std").text("Std: " + statistics[1]);
 	
 		$("#time_data").find(".max").text("Max: " + Math.max.apply(null, gon.t));
 		$("#time_data").find(".min").text("Min: " + Math.min.apply(null, gon.t));
+		statistics = average(gon.t);
+		$("#time_data").find(".ave").text("Ave: " + statistics[0]);
+		$("#time_data").find(".std").text("Std: " + statistics[1]);
 	});
 	function average(data){
 		var ave = 0;
@@ -140,9 +149,6 @@
 			varia = varia + Math.pow(data[i] - ave, 2);
 		}
 
-		return [ave, Math.pow(varia)];
-	}
-	function std(data){
-		
+		return [ave, Math.sqrt(varia,2)];
 	}
 </script>
