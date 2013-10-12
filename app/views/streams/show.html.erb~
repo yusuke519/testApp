@@ -27,27 +27,11 @@
 				pointColor : "rgba(151,187,205,1)",
 				pointStrokeColor : "#fff",
 				data : gon.temp_y
+
 			}
-			]
-		}
-		var ctx = document.getElementById("myChart").getContext("2d");
-		//var ctx = $("#myChart").get(0).getContext("2d");
-		//
-		var dataTest={
-			labels : gon.t,
-			datasets:[
-			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
-				pointStrokeColor : "#fff",
-				data : gon.x
-			}
-			]
-		}
-	var myChart = new Chart(ctx);
-	myChart.Line(data);
-	alert(gon.temp_x);
-	alert(temp)
-	})
+			] 
+		} 
+		var ctx = document.getElementById("myChart").getContext("2d"); 
+
+	});
 </script>
