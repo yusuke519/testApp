@@ -13,7 +13,7 @@
 		labels = ["January","February","March","April","May","June","July"]
 		testLabel = [1,2,3,4,5,6,7]
 		var data = {
-			labels : gon.temp_t,
+			labels : testLabel,
 			datasets : [
 			{
 				fillColor : "rgba(220,220,220,0.5)",
@@ -32,6 +32,12 @@
 			}
 			] 
 		} 
+		var option{
+			pointDot:false
+			
+			
+			
+		}
 		var ctx = document.getElementById("myChart").getContext("2d"); 
 		new Chart(ctx).Line(data);
 	});
