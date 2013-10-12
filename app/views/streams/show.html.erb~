@@ -8,7 +8,7 @@
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">Time Data</div>
-				<div id='x data'class="panel-body">
+				<div id='x_data'class="panel-body">
 					<ul>
 						<li class='max'>Max:</li>
 						<li class='min'>Min:</li>
@@ -91,5 +91,7 @@
 
 		alert("Max of x is " + Math.max.apply(null, gon.x));
 		alert("Min of x is " + Math.min.apply(null, gon.x));
+
+		var element = $("#x_data")
 	});
 </script>
