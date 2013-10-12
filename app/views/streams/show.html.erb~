@@ -12,7 +12,7 @@
 		tempL = gon.temp_t
 		labels = ["January","February","March","April","May","June","July"]
 		var data = {
-			labels : labels,
+			labels : gon.temp_t,
 			datasets : [
 			{
 				fillColor : "rgba(220,220,220,0.5)",
