@@ -41,7 +41,7 @@ log = console.log.bind(console);
 	}
 
 	function readFile(evt){
-      var reader, target, acceData, estimationData,latlngData;
+      var reader, target;
       target = this.id;
       file = eval(target).files[0];
       reader = new FileReader();
@@ -56,8 +56,9 @@ log = console.log.bind(console);
 		  acceDATA = str.split("\n");
 		  alert("acceleration file");
 		  } else if (target == "estimationFile") {
-		  colorData = str.split("\n");
+		  estimationData = str.split("\n");
 		  alert("estimationFile");
+		  alert(estimationData)
 		  } else {
 		  latlngData = str.split("\n");
 		  alert("latlng file");
