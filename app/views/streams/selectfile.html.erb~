@@ -56,4 +56,5 @@
 
 	//リスナーに追加しておく
 	document.getElementById('acceFile').addEventListener('change', handleFileSelect, false);
+	document.getElementById('estimationFile').addEventListener('change', handleFileSelect, false);
 </script>
