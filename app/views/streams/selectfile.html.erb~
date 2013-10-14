@@ -28,7 +28,7 @@
 
 
 <script>
-var log;
+var log,acceData,estimationData,latlngData;
 log = console.log.bind(console);
 	function test(){
 	  alert("test");
@@ -55,7 +55,6 @@ log = console.log.bind(console);
 		if (target == "acceFile"){
 		  acceDATA = str.split("\n");
 		  alert("acceleration file");
-
 		  } else if (target == "estimationFile") {
 		  colorData = str.split("\n");
 		  alert("estimationFile");
