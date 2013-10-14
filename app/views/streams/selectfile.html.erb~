@@ -57,6 +57,7 @@ log = console.log.bind(console);
 		  alert("acceleration file");
 		  } else if (target == "estimationFile") {
 		  estimationData = str.split("\n");
+		  alert(str)
 		  alert("estimationFile");
 		  } else {
 		  latlngData = str.split("\n");
@@ -69,18 +70,67 @@ log = console.log.bind(console);
       reader.onerror = function(evt) {
 		return log(evt);
 	  }
-	  //var files = evt.target.acceFile; // FileList object
-	  //  alert("read file")
-	  //// files is a FileList of File objects. List some properties.
-	  //var output = [];
-	  //for (var i = 0, f; f = files[i]; i++) {
-	  //  output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-	  //  f.size, ' bytes, last modified: ',
-	  //  f.lastModifiedDate.toLocaleDateString(), '</li>');
-	  //}
-	  //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+
 	}
 
+    function saveData(){
+      var color, elm, from, fromTime, index, line, to, toTime, _i, _len, _results;
+      color = "";
+      from = {};
+      to = {};
+      fromTime = "";
+      toTime = "";
+      _results = [];
+      for (index = _i = 0, _len = colorData.length; _i < _len; index = ++_i) {
+        line = colorData[index];
+        elm = line.split(" ");
+        fromTime = elm[0];
+        toTime = elm[1];
+		
+		//color = '#';
+		//colorをrgb(r,g,b)の形で表現する
+        color = "rgb(";
+
+		color += Math.floor(parseFloat(elm[2]));
+		color += ',';
+		color += Math.floor(parseFloat(elm[3]));
+		color += ',';
+		color += Math.floor(parseFloat(elm[4]));
+		color += ')';
+		
+		from = getLatlng(fromTime);
+        to = getLatlng(toTime);
+        //_results.push(mapJS.drawLine(from, to, color));
+      }
+      return _results;
+	}
+
+    function getLatlng(time) {
+      var elm, lat, line, lng, tmp, _i, _len, _ref;
+      tmp = "";
+      lat = "";
+      lng = "";
+      for (_i = 0, _len = latlngData.length; _i < _len; _i++) {
+        line = latlngData[_i];
+        if (tmp === "") {
+          tmp = line.split(" ");
+          continue;
+        }
+        elm = line.split(" ");
+        if ((tmp[0] * 1 <= (_ref = time * 1) && _ref < elm[0] * 1)) {
+          lat = tmp[1] * 1 + (elm[1] - tmp[1]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
+          lng = tmp[2] * 1 + (elm[2] - tmp[2]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
+          if (!(parseInt(lat) === 35)) {
+            log(lat + ":" + lng);
+          }
+          return {
+            lat: lat,
+            lng: lng
+          };
+        }
+        tmp = elm;
+      }
+    },
 
 	//リスナーに追加しておく
 	document.getElementById('acceFile').addEventListener('change', readFile, false);
