@@ -58,7 +58,6 @@ log = console.log.bind(console);
 		  } else if (target == "estimationFile") {
 		  estimationData = str.split("\n");
 		  alert("estimationFile");
-		  alert(estimationData)
 		  } else {
 		  latlngData = str.split("\n");
 		  alert("latlng file");
