@@ -5,17 +5,17 @@
   <form role="form">
 	<div class="form-group">
 	  <label for="exampleInputFile">Acceleration</label>
-	  <input type="file" id="exampleInputFile">
+	  <input type="file" id="acceFile">
 	  <p class="help-block">Format = "StartTime StopTime Data"</p>
 	</div>
 	<div class="form-group">
 	  <label for="exampleInputFile">Estimation</label>
-	  <input type="file" id="exampleInputFile">
+	  <input type="file" id="estimationFile">
 	  <p class="help-block">Format = "StartTime StopTime Actual Estimation"</p>
 	</div>
 	<div class="form-group">
 	  <label for="exampleInputFile">LatLng</label>
-	  <input type="file" id="exampleInputFile">
+	  <input type="file" id="latlngFile">
 	  <p class="help-block">Format = "StartTime StopTime Lat Lng"</p>
 	</div>
 	<select class="form-control">
@@ -30,6 +30,12 @@
 <script>
 
 	function test(){
-		alert("test");
+	  alert("test");
+	  // Check for the various File API support.
+	  if (window.File && window.FileReader && window.FileList && window.Blob) {
+		// Great success! All the File APIs are supported.
+		} else {
+		alert('The File APIs are not fully supported in this browser.');
+	  }
 	}
 </script>
