@@ -17,8 +17,8 @@ TestApp::Application.routes.draw do
   get 'streams/:id' => 'streams#show'
   post 'streams' => 'streams#create' 
   post 'streams/set' => 'streams#set_data' 
-  get 'streams/selectfile' => 'streams#selectfile'
-  post 'streams/savefile' => 'streams#savefile'
+  get 'streams/selectfile' => 'streams#selectfile', :as => :selectfile
+  post 'streams/savefile' => 'streams#savefile', :as => :savefile
 
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
