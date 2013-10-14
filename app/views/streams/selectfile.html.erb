@@ -40,16 +40,41 @@
 	}
 
 	function readFile(evt){
-	  var files = evt.target.acceFile; // FileList object
-		alert("read file")
-	  // files is a FileList of File objects. List some properties.
-	  var output = [];
-	  for (var i = 0, f; f = files[i]; i++) {
-		output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-		f.size, ' bytes, last modified: ',
-		f.lastModifiedDate.toLocaleDateString(), '</li>');
+      var reader, target, acceData, colorData,latlngData;
+      target = this.id;
+      file = eval(target).files[0];
+      reader = new FileReader();
+      reader.readAsText(file, "UTF-8");
+      reader.onprogress = function(evt) {
+        return log(evt);
+      };
+      reader.onload = function(evt) {
+        var str;
+        str = evt.target.result;
+        if (target === "estimationFile") {
+		  colorData = str.split("\n");
+		  alert("estimationFile");
+        } else {
+		latlngData = str.split("\n");
+		alert("other file");
+        }
+        if (colorData && latlngData) {
+          //return fileJS.draw();
+        }
+      };
+      reader.onerror = function(evt) {
+		return log(evt);
 	  }
-	  document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+	  //var files = evt.target.acceFile; // FileList object
+	  //  alert("read file")
+	  //// files is a FileList of File objects. List some properties.
+	  //var output = [];
+	  //for (var i = 0, f; f = files[i]; i++) {
+	  //  output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+	  //  f.size, ' bytes, last modified: ',
+	  //  f.lastModifiedDate.toLocaleDateString(), '</li>');
+	  //}
+	  //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 	}
 
 
