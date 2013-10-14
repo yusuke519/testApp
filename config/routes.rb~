@@ -17,7 +17,7 @@ TestApp::Application.routes.draw do
   get 'streams/:id' => 'streams#show'
   post 'streams' => 'streams#create' 
   post 'streams/set' => 'streams#set_data' 
-  get 'streams/select' => 'streams#savefile'
+  get 'streams/selectfile' => 'streams#selectfile'
   post 'streams/savefile' => 'streams#savefile'
 
   resources :sessions
