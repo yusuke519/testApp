@@ -63,7 +63,7 @@ class StreamsController < ApplicationController
 	end
 	
 	def savefile
-		
+		render :text => "PAGE"
 	end
 
 
