@@ -40,7 +40,7 @@
 	  }
 	}
 
-	function readFile(){
+	function readFile(evt){
 	  var files = evt.target.acceFile; // FileList object
 		alert("read file")
 	  // files is a FileList of File objects. List some properties.
@@ -55,6 +55,6 @@
 
 
 	//リスナーに追加しておく
-	document.getElementById('acceFile').addEventListener('change', handleFileSelect, false);
-	document.getElementById('estimationFile').addEventListener('change', handleFileSelect, false);
+	document.getElementById('acceFile').addEventListener('change', readFile, false);
+	document.getElementById('estimationFile').addEventListener('change', readFile, false);
 </script>
