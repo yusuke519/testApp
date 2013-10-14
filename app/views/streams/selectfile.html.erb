@@ -28,7 +28,8 @@
 
 
 <script>
-
+var log;
+log = console.log.bind(console);
 	function test(){
 	  alert("test");
 	  // Check for the various File API support.
@@ -40,7 +41,7 @@
 	}
 
 	function readFile(evt){
-      var reader, target, acceData, colorData,latlngData;
+      var reader, target, acceData, estimationData,latlngData;
       target = this.id;
       file = eval(target).files[0];
       reader = new FileReader();
@@ -48,16 +49,19 @@
       reader.onprogress = function(evt) {
         return log(evt);
       };
-      reader.onload = function(evt) {
-        var str;
-        str = evt.target.result;
-        if (target === "estimationFile") {
+	  reader.onload = function(evt) {
+		var str;
+		str = evt.target.result;
+		if (target == "acceFile"){
+		  acceDATA = str.split("\n");
+		  alert("acceleration file");
+		  } else if (target == "estimationFile") {
 		  colorData = str.split("\n");
 		  alert("estimationFile");
-        } else {
-		latlngData = str.split("\n");
-		alert("other file");
-        }
+		  } else {
+		  latlngData = str.split("\n");
+		  alert("latlng file");
+		}
         if (colorData && latlngData) {
           //return fileJS.draw();
         }
