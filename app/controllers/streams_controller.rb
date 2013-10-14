@@ -66,6 +66,10 @@ class StreamsController < ApplicationController
 		render :text => "PAGE"
 	end
 
+	def selectfile
+
+	end
+
 
 	private
 	#本当はモデルの機能として持たせるべきな気がする
