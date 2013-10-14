@@ -61,6 +61,11 @@ class StreamsController < ApplicationController
 			render :text => "Fail"
 		end
 	end
+	
+	def savefile
+
+	end
+
 
 	private
 	#本当はモデルの機能として持たせるべきな気がする
