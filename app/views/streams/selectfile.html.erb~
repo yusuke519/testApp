@@ -19,12 +19,17 @@
 	  <p class="help-block">Format = "StartTime StopTime Lat Lng"</p>
 	</div>
 	<select class="form-control">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
+	  <option>Yusuke</option>
+	  <option>Goto</option>
 	</select>
-	<button type="submit" class="btn btn-default">Submit</button>
+	<button type="submit" class="btn btn-default" onclick="test()">Submit</button>
   </form>
 </div>
+
+
+<script>
+
+	function test(){
+		alert("test")
+	}
+</script>
