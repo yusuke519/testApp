@@ -42,7 +42,7 @@
 
 	function readFile(){
 	  var files = evt.target.acceFile; // FileList object
-
+		alert("read file")
 	  // files is a FileList of File objects. List some properties.
 	  var output = [];
 	  for (var i = 0, f; f = files[i]; i++) {
@@ -53,5 +53,8 @@
 	  document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
 	}
 
+
+	//リスナーに追加しておく
 	document.getElementById('acceFile').addEventListener('change', handleFileSelect, false);
+	document.getElementById('estimationFile').addEventListener('change', handleFileSelect, false);
 </script>
