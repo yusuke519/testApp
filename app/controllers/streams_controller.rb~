@@ -1,5 +1,5 @@
 class StreamsController < ApplicationController
-	skip_before_filter :verify_authenticity_token ,:only=>[:create, :set_data]
+	skip_before_filter :verify_authenticity_token ,:only=>[:create, :set_datam, :savefile]
 
 	def index
 		@streams = Stream.all
@@ -40,6 +40,7 @@ class StreamsController < ApplicationController
 		gon.z = z
 		gon.t = t
 	end 
+	
 	def create
 		stream = Stream.new
 		if @stream.save
@@ -62,7 +63,16 @@ class StreamsController < ApplicationController
 	end
 	
 	def savefile
-		render :text => "PAGE"
+		acceFile = params[:acce]
+		estimationFile = params[:estimate]
+		latlngFile = params[:latlng]
+
+		acceData = Array.new()
+		estimationData = Array.new()
+		latlngData = Array.new()
+		
+
+		render :text => f.read.split("\n")[0]
 	end
 
 	def selectfile
@@ -85,6 +95,48 @@ class StreamsController < ApplicationController
 			dp.accelerations.create(:sequence => sequence, :time => t, :x => x, :y => y, :z => z)
 			sequence = sequence + 1
 		}
+	end
+	class File2Model
+	  def initialize(acceF, estimationF, latlngF)
+		@acceF = acceF
+		@estimationF = estimationF
+		@latlngF = latlngF
+		@acceD = acceF.read.split('\n').split(',')
+		@estimationD = estimationF.read.split('\n').split(' ')
+		@latlngD = latlngF.read.split('\n').split(' ')
+	  end
+
+	  def make
+		#Create Stream
+		
+		#Create DataPoint
+		
+		#Create Acceleration
+		
+		#Create Result
+	  end
+
+	  def getLatlng(time)
+		lat=""
+		lng=""
+		tmp=""
+		elm=""
+		for i in 0..@latlngD.length-1
+			if(tmp == "")
+				tmp = @latlngD[i]
+			end
+
+			if((tmp[0].to_f <= (time.to_f) && time.to_f < elm[0].to=f))
+			  lat = tmp[1] * 1 + (elm[1] - tmp[1]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
+			  lng = tmp[2] * 1 + (elm[2] - tmp[2]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
+
+			  return lat,lng
+			end
+		end
+
+		return 0,0
+	  end
+
 	end
 
 
