@@ -70,9 +70,7 @@ log = console.log.bind(console);
       reader.onerror = function(evt) {
 		return log(evt);
 	  }
-
 	}
-
     function saveData(){
       var color, elm, from, fromTime, index, line, to, toTime, _i, _len, _results;
       color = "";

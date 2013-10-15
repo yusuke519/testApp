@@ -63,7 +63,8 @@ class StreamsController < ApplicationController
 	end
 	
 	def savefile
-		render :text => "PAGE"
+		f = params[:attachment]
+		render :text => f.original_filename
 	end
 
 	def selectfile
