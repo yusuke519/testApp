@@ -105,7 +105,13 @@ class StreamsController < ApplicationController
 		#Create Stream
 		
 		#Create DataPoint
-		
+		for i in 0..@estimationD.length - 1
+			fromTime = @estimationD[i][0]
+			toTime = @estimationD[i][1]
+			
+			from = getLatlng(fromTime)
+			to = getLatlng(toTime)
+		end
 		#Create Acceleration
 		
 		#Create Result
@@ -125,7 +131,7 @@ class StreamsController < ApplicationController
 			  lat = tmp[1] * 1 + (elm[1] - tmp[1]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
 			  lng = tmp[2] * 1 + (elm[2] - tmp[2]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
 
-			  return lat,lng
+			  return Hash.new({:lat => lat, :lng => lng,})
 			end
 		end
 
