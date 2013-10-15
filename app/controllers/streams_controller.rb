@@ -75,7 +75,6 @@ class StreamsController < ApplicationController
 
 	end
 
-
 	private
 	#本当はモデルの機能として持たせるべきな気がする
 	def addAcce(dp, data)
@@ -97,7 +96,7 @@ class StreamsController < ApplicationController
 		@acceF = acceF
 		@estimationF = estimationF
 		@latlngF = latlngF
-		@acceD = acceF.read.split('\n').split(',')
+		#@acceD = acceF.read.split('\n').split(',')
 		@estimationD = estimationF.read.split('\n').split(' ')
 		@latlngD = latlngF.read.split('\n').split(' ')
 	  end
