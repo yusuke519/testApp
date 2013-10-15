@@ -64,7 +64,7 @@ class StreamsController < ApplicationController
 	
 	def savefile
 		f = params[:acce]
-		render :text => f.original_filename
+		render :text => f.read
 	end
 
 	def selectfile
