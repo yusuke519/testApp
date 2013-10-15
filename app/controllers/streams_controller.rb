@@ -63,7 +63,7 @@ class StreamsController < ApplicationController
 	end
 	
 	def savefile
-		f = params[:attachment]
+		f = params[:acce]
 		render :text => f.original_filename
 	end
 
