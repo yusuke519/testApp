@@ -67,12 +67,8 @@ class StreamsController < ApplicationController
 		estimationFile = params[:estimate]
 		latlngFile = params[:latlng]
 
-		acceData = Array.new()
-		estimationData = Array.new()
-		latlngData = Array.new()
-		
-
-		render :text => f.read.split("\n")[0]
+		File2Model.new(acceFile,estimationFile,latlngFile)
+		render :text => "TEST"
 	end
 
 	def selectfile
