@@ -64,7 +64,7 @@ class StreamsController < ApplicationController
 	
 	def savefile
 		f = params[:acce]
-		render :text => f.read.split("\n")
+		render :text => f.read.split("\n")[0]
 	end
 
 	def selectfile
