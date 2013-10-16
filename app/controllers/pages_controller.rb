@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def map
 
   end
+
+  def load
+
+  end
 end
