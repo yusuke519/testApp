@@ -12,14 +12,14 @@ class PagesController < ApplicationController
 		data_source = 'all'
 		
 		#設定に応じてデータを読み取る
-		if data_source == 'all'
-			@streams = Stream.all
-		else
-			@streams = Stream.find(data_source.to_i)
-		end
-		@streams.each{|s|
-			@data_points << s.data_points
-		}
+		#if data_source == 'all'
+		#	@streams = Stream.all
+		#else
+		#	@streams = Stream.find(data_source.to_i)
+		#end
+		#@streams.each{|s|
+		#	@data_points << s.data_points
+		#}
 		
 		#読み込んだデータをxml形式でreturnする
 		#
