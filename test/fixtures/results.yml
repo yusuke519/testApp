@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_point_id: MyString
+  type: 
+
+two:
+  data_point_id: MyString
+  type: 

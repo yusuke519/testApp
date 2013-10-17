@@ -1,3 +1,5 @@
+require 'pry'
+
 class StreamsController < ApplicationController
 	skip_before_filter :verify_authenticity_token ,:only=>[:create, :set_datam, :savefile]
 
@@ -67,7 +69,8 @@ class StreamsController < ApplicationController
 		estimationFile = params[:estimate]
 		latlngFile = params[:latlng]
 
-		File2Model.new(acceFile,estimationFile,latlngFile)
+		File2Model.new(acceFile,estimationFile,latlngFile).make
+
 		render :text => "TEST"
 	end
 
@@ -97,21 +100,36 @@ class StreamsController < ApplicationController
 		@estimationF = estimationF
 		@latlngF = latlngF
 		#@acceD = acceF.read.split('\n').split(',')
-		@estimationD = estimationF.read.split('\n').split(' ')
-		@latlngD = latlngF.read.split('\n').split(' ')
+		ard = acceF.read.split("\n")
+		erd = estimationF.read.split("\n")
+		lrd = latlngF.read.split("\n")
+		@acceD = ard
+		@estimationD = erd
+		@latlngD = lrd
 	  end
 
 	  def make
 		#Create Stream
-		
+		stream = Stream.new
+		stream.save
 		#Create DataPoint
-		for i in 0..@estimationD.length - 1
-			fromTime = @estimationD[i][0]
-			toTime = @estimationD[i][1]
+		result_type = "Bump"
+		result_value = ""
+		@estimationD.each{|line|
+			temp = line.split(" ")
+			fromTime = temp[0].to_f
+			toTime = temp[1].to_f
 			
 			from = getLatlng(fromTime)
 			to = getLatlng(toTime)
-		end
+			if temp[2].to_i == 0
+			  result_value = "Flat"
+			else 
+			  result_value = "Bump"
+			end
+			data_point = stream.data_points.create(:start_time => fromTime.to_s, :stop_time => toTime.to_s, :data_type => "File", :from_lat => from[:lat], :from_lng => from[:lng], :to_lat => to[:lat], :to_lng => to[:lng])
+			data_point.results.create(:type => result_type, :value => result_value)		
+		}
 		#Create Acceleration
 		
 		#Create Result
@@ -122,24 +140,28 @@ class StreamsController < ApplicationController
 		lng=""
 		tmp=""
 		elm=""
-		for i in 0..@latlngD.length-1
+		@latlngD.each{|line|
 			if(tmp == "")
-				tmp = @latlngD[i]
+				tmp = line.split(" ")
+			end
+			elm = line.split(" ")
+			if((tmp[0].to_f <= (time.to_f) && time.to_f < elm[0].to_f))
+			  lat = tmp[1].to_f * 1 + (elm[1].to_f - tmp[1].to_f) * ((time - tmp[0].to_f) / (elm[0].to_f - tmp[0].to_f))
+			  lng = tmp[2].to_f * 1 + (elm[2].to_f - tmp[2].to_f) * ((time - tmp[0].to_f) / (elm[0].to_f - tmp[0].to_f))
+			  h = Hash.new()
+			  h[:lat]=lat
+			  h[:lng]=lng
+			  return h
 			end
 
-			if((tmp[0].to_f <= (time.to_f) && time.to_f < elm[0].to=f))
-			  lat = tmp[1] * 1 + (elm[1] - tmp[1]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
-			  lng = tmp[2] * 1 + (elm[2] - tmp[2]) * ((time - tmp[0]) / (elm[0] - tmp[0]));
-
-			  return Hash.new({:lat => lat, :lng => lng,})
-			end
-		end
-
-		return 0,0
+			tmp = elm
+		}
+		h = Hash.new()
+		h[:lat]=nil
+		h[:lng]=nil
+		return h
 	  end
-
 	end
-
 
 	def data_point_param
 		params.permit(:start_time, :stop_time, :data_type)

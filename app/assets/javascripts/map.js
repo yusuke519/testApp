@@ -45,54 +45,31 @@ function SelectVisibleObjectControl(controlDiv, map) {
 
   var controlUI = document.createElement('div');
   controlUI.className = "btn-group"
-  controlDiv.appendChild(controlUI);
 
   var buttonUI = document.createElement("button");
-  buttonUI.className = "btn btn-default";
+  buttonUI.className = "btn btn-primary";
   buttonUI.value = "Left"
   buttonUI.setAttribute("type", "button")
   controlUI.appendChild(buttonUI)
   
   var buttonUI2 = document.createElement("button");
-  buttonUI2.className = "btn btn-default"
-  buttonUI.value = "Right"
+  buttonUI2.className = "btn btn-primary"
+  buttonUI.setAttribute("value","OK")
   buttonUI2.setAttribute("type", "button")
   controlUI.appendChild(buttonUI2)
 
+  controlDiv.appendChild(controlUI);
   // Setup the click event listeners: simply set the map to Chicago.
   google.maps.event.addDomListener(buttonUI, 'click', function() {
 	  alert("UI1")
-	  test()
   });
 }
 
-function test(){
-	$.post("/pages/map/load",
-			{ name: "John", time: "2pm" },
-			function(data){
-				alert("Lat: " + data.lat + ", Lng: " + data.lng);
-				var color = "rgb(123,150,221)";
-				var ratio = 0.5;
-				var circle = new google.maps.Circle({
-				  center: new google.maps.LatLng(data.lat, data.lng), 
-				  fillColor: color,
-				  fillOpacity: ratio, 
-				  map: map, 
-				  radius:10, 
-				  strokeColor: color,
-				  strokeOpacity: ratio,
-				  strokeWeight: 1
-				});
-				alert('OK');
-			}
-		  );
-}
 window.onload = function() {
   rangeStart = 0;
   rangeEnd = 100;
   mapJS = {
     init: function() {
-      var latlng, myOptions;
       latlng = new google.maps.LatLng(35.685222, 139.729387);
       myOptions = {
         zoom: 17,
@@ -116,13 +93,14 @@ window.onload = function() {
 
 	  homeControlDiv.index = 1;
 	  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
-	  //Iwasawa Add Script
-	  // Custumize Style
-		
 	  var testDiv = document.createElement('div');
 	  var testControl = new SelectVisibleObjectControl(testDiv,map);
 	  
-	  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(testDiv);
+	  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(testDiv);
+
+	  //Iwasawa Add Script
+	  // Custumize Style
+
 	  var baseOptions = [{
 		featureType:'all',
 		elementType:'geometry',
