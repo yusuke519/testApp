@@ -27,8 +27,9 @@ class PagesController < ApplicationController
 			#読み込んだデータをxml形式でreturnする
 			#
 			res = Hash.new()
-			res[:name] = 'Jhon'
-			res[:age] = '15'
+			res[:lat] = 35.67975631042715
+			res[:lng] = 139.73548426066236
+			res[:value] = 'Bump'
 			render :json => res
 		end
 	end
