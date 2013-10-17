@@ -70,7 +70,7 @@ function test(){
 	$.post("/pages/map/load",
 			{ name: "John", time: "2pm" },
 			function(data){
-				alert("Data Loaded " + data[0].name);
+				alert("Data Loaded " + data);
 			}
 		  );
 }
