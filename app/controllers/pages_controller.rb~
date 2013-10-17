@@ -26,6 +26,9 @@ class PagesController < ApplicationController
 
 			#読み込んだデータをxml形式でreturnする
 			#
+			res = Hash.new()
+			res[:name] = 'Jhon'
+			res[:age] = '15'
 			render :text => 'OK'
 		end
 	end
