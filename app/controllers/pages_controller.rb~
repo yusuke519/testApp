@@ -20,8 +20,10 @@ class PagesController < ApplicationController
 		@streams.each{|s|
 			@data_points << s.data_points
 		}
-
+		
 		#読み込んだデータをxml形式でreturnする
-	end
+		#
+		render :text => 'TEST'
+end
 
 end

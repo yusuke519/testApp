@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 		data_source = 'all'
 		
 		#設定に応じてデータを読み取る
-		if datasource == 'all'
+		if data_source == 'all'
 			@streams = Stream.all
 		else
 			@streams = Stream.find(data_source.to_i)
