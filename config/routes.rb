@@ -4,6 +4,7 @@ TestApp::Application.routes.draw do
   resources :posts
   get "pages/top"
   get "pages/map"
+  post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
   get 'signup' => 'users#new', :as => :signup

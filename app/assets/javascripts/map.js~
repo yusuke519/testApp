@@ -5,6 +5,75 @@ map = "";
 
 markerArray = [];
 
+function HomeControl(controlDiv, map) {
+
+  // Set CSS styles for the DIV containing the control
+  // Setting padding to 5 px will offset the control
+  // from the edge of the map.
+  controlDiv.style.padding = '5px';
+
+  // Set CSS for the control border.
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '4px';
+  controlText.style.paddingRight = '4px';
+  controlText.innerHTML = '<strong>Home</strong>';
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+	  alert("TEST")
+    map.setCenter(new google.maps.LatLng(35.685222, 139.729387))
+  });
+}
+function SelectVisibleObjectControl(controlDiv, map) {
+
+  // Set CSS styles for the DIV containing the control
+  // Setting padding to 5 px will offset the control
+  // from the edge of the map.
+
+  var controlUI = document.createElement('div');
+  controlUI.className = "btn-group"
+  controlDiv.appendChild(controlUI);
+
+  var buttonUI = document.createElement("button");
+  buttonUI.className = "btn btn-default";
+  buttonUI.value = "Left"
+  buttonUI.setAttribute("type", "button")
+  controlUI.appendChild(buttonUI)
+  
+  var buttonUI2 = document.createElement("button");
+  buttonUI2.className = "btn btn-default"
+  buttonUI.value = "Right"
+  buttonUI2.setAttribute("type", "button")
+  controlUI.appendChild(buttonUI2)
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  google.maps.event.addDomListener(buttonUI, 'click', function() {
+	  alert("UI1")
+	  test()
+  });
+}
+
+function test(){
+	$.post("/pages/map/load",
+			{ name: "John", time: "2pm" },
+			function(data){
+				alert("Data Loaded" + data);
+			}
+		  );
+}
 window.onload = function() {
   rangeStart = 0;
   rangeEnd = 100;
@@ -15,14 +84,32 @@ window.onload = function() {
       myOptions = {
         zoom: 17,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true // Eliminate Control UIs
+		navigationControl: false,
+		panControl: false,
+		mapTypeControl: true,
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+		},
+		zoomControl: true,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.SMALL
+		},
+        mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       map = new google.maps.Map(document.getElementById("map"), myOptions);
+	  
+	  var homeControlDiv = document.createElement('div');
+	  var homeControl = new HomeControl(homeControlDiv, map);
 
+	  homeControlDiv.index = 1;
+	  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 	  //Iwasawa Add Script
 	  // Custumize Style
-
+		
+	  var testDiv = document.createElement('div');
+	  var testControl = new SelectVisibleObjectControl(testDiv,map);
+	  
+	  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(testDiv);
 	  var baseOptions = [{
 		featureType:'all',
 		elementType:'geometry',
