@@ -75,12 +75,12 @@ function test(){
 				var ratio = 1.0
 				var circle = new google.maps.Circle({
 				  center: new google.maps.LatLng(data.lat, data.lng), 
-				  fillColor: color,
-				  fillOpacity: ratio, 
+				  //fillColor: color,
+				  //fillOpacity: ratio, 
 				  map: map, 
 				  radius:10, 
-				  strokeColor: color,
-				  strokeOpacity: ratio,
+				  //strokeColor: color,
+				  //strokeOpacity: ratio,
 				  strokeWeight: 1
 				});
 			}
