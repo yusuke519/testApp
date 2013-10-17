@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 			res = Hash.new()
 			res[:name] = 'Jhon'
 			res[:age] = '15'
-			render :text => 'OK'
+			render :xml => res
 		end
 	end
 end
