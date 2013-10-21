@@ -79,7 +79,7 @@ function test(){
 			  fillColor: color,
 			  fillOpacity: ratio, 
 			  map: map, 
-			  radius:5 
+			  radius:5,
 			  strokeColor: color,
 			  strokeOpacity: ratio,
 			  strokeWeight: 1
