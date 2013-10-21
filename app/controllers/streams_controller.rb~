@@ -109,12 +109,20 @@ class StreamsController < ApplicationController
 	  end
 
 	  def make
+		#この処理もAjax（っていうか非同期で書いた方が良い気がする）
+		#Ajaxで送って、非同期で処理する．が正解？
+		#
+		#Ajax:クライアント側の描画速度の問題
+		#サーバー側の処理速度（ないし並列処理の問題）
+		#
+		#
 		#Create Stream
 		stream = Stream.new
 		stream.save
 		#Create DataPoint
 		result_type = "Bump"
 		result_value = ""
+		index = 0
 		@estimationD.each{|line|
 			temp = line.split(" ")
 			fromTime = temp[0].to_f
@@ -128,11 +136,30 @@ class StreamsController < ApplicationController
 			  result_value = "Bump"
 			end
 			data_point = stream.data_points.create(:start_time => fromTime.to_s, :stop_time => toTime.to_s, :data_type => "File", :from_lat => from[:lat], :from_lng => from[:lng], :to_lat => to[:lat], :to_lng => to[:lng])
-			data_point.results.create(:type => result_type, :value => result_value)		
+			#Create Result
+			data_point.results.create(:type => "", :value => result_value)		
+			
+			#acceLine = @acceD[index]
+			#acceData = acceLine.split(' ')[2]
+
+			#dataAry = Array.new()
+			#sequence = 0
+			#temp = Array.new()
 		}
-		#Create Acceleration
-		
-		#Create Result
+	  end
+	  def addAcce(dp, data)
+		dataAry = Array.new()
+		sequence = 0
+		temp = Array.new()
+		data.split(' ').each{|point|
+		  temp = point.split(',')
+		  t = temp[0]
+		  x = temp[1].to_f
+		  y = temp[2].to_f
+		  z = temp[3].to_f
+		  dp.accelerations.create(:sequence => sequence, :time => t, :x => x, :y => y, :z => z)
+		  sequence = sequence + 1
+		}
 	  end
 
 	  def getLatlng(time)

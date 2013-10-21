@@ -61,10 +61,35 @@ function SelectVisibleObjectControl(controlDiv, map) {
   controlDiv.appendChild(controlUI);
   // Setup the click event listeners: simply set the map to Chicago.
   google.maps.event.addDomListener(buttonUI, 'click', function() {
-	  alert("UI1")
+	  alert("UI1");
+	  test();
   });
 }
-
+function test(){
+  $.post("/pages/map/load",
+	  { name: "John", time: "2pm" },
+	  function(data){
+		for (i = 0; i < data.length; i++){
+		  // alert("Lat: " + data[i].from_lat + ", Lng: " + data[i].from_lng);
+		  var color = "rgb(123,150,221)";
+		  var ratio = 0.5;
+		  if(data[i].value == "Bump"){
+			var circle = new google.maps.Circle({
+			  center: new google.maps.LatLng(data[i].from_lat, data[i].from_lng), 
+			  fillColor: color,
+			  fillOpacity: ratio, 
+			  map: map, 
+			  radius:5 
+			  strokeColor: color,
+			  strokeOpacity: ratio,
+			  strokeWeight: 1
+			});
+		  }
+		}
+		alert('OK');
+	  }
+	  );
+}
 window.onload = function() {
   rangeStart = 0;
   rangeEnd = 100;
