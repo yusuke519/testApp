@@ -21,9 +21,9 @@
   <body>
 	  <div id="wrap">
 		  <div id="contents">
-			  <%= render 'shared/header' %>
+			  <%= render 'shared/header4admin' %>
+			  <%= yield %>
 		  </div>
-		  <%= yield %>
 	  </div>
     <!-- Javascripts
     ================================================== -->
