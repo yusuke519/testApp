@@ -1,11 +1,18 @@
 require 'pry'
 class PagesController < ApplicationController
   def top
-
   end
 
   def map
+  end
 
+  def contact
+  end
+
+  def about
+  end
+
+  def term
   end
 
 
