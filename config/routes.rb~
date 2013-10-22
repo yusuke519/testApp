@@ -6,6 +6,7 @@ TestApp::Application.routes.draw do
   get "pages/map"
   get "pages/contact"
   get "pages/about"
+  get "pages/term"
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
