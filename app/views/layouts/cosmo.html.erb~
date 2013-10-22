@@ -19,12 +19,12 @@
 	<%= include_gon %>
   </head>
   <body>
-
-	<%= render 'shared/header' %>
-	<%= yield %>
-
-	<br>
-	<render 'shared/footer' %>
+	  <div id="wrap">
+		  <div id="contents">
+			  <%= render 'shared/header' %>
+		  </div>
+		  <%= yield %>
+	  </div>
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
