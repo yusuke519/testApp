@@ -91,7 +91,6 @@ function dataLoad(){
 	  );
 }
 window.onload = function() {
-  alert('On Load')
   rangeStart = 0;
   rangeEnd = 100;
   mapJS = {
