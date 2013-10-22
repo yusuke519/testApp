@@ -11,8 +11,9 @@
 	</div>
 	<div class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav">
-		<li><%= link_to 'Life Support', pages_map_path %></li>
-		<li><a href="#about"><span class="glyphicon glyphicon-music"></span>Entertaiment</a></li>
+		<li><%= link_to 'Accessibility Map', pages_map_path %></li>
+		<li><%= link_to 'Download', download_path %></li>
+	  <% if current_user %>
 		<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">管理メニュー <b class="caret"></b></a>
 		<ul class="dropdown-menu">
@@ -23,6 +24,7 @@
 		</ul>
 		</li>
 	  </ul>
+	  <% end %>
 	  <% if current_user %>
 		<ul class="nav navbar-right">
 		  <li><%= link_to current_user.name, current_user %></li>

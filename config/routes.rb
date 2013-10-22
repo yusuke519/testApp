@@ -3,11 +3,12 @@ TestApp::Application.routes.draw do
 
   resources :posts
   get "pages/top"
-  get "pages/map"
+  get "map" => 'pages#map', :as => :map
   get "contact" => 'pages#contact',:as  => :contact
   get "about" => 'pages#about', :as => :about
   get "term" => 'pages#term', :as => :term
   get "update" => 'pages#update', :as => :update
+  get "download" => 'pages#download', :as => :download
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
