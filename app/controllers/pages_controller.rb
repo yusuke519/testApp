@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def map
-	  render :layout => 'cosmo4map'
+	  render :template => 'layouts/cosmo4map'
   end
 
   def contact
