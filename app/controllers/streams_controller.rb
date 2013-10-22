@@ -99,7 +99,6 @@ class StreamsController < ApplicationController
 		@acceF = acceF
 		@estimationF = estimationF
 		@latlngF = latlngF
-		#@acceD = acceF.read.split('\n').split(',')
 		ard = acceF.read.split("\n")
 		erd = estimationF.read.split("\n")
 		lrd = latlngF.read.split("\n")
@@ -139,12 +138,10 @@ class StreamsController < ApplicationController
 			#Create Result
 			data_point.results.create(:type => "", :value => result_value)		
 			
-			#acceLine = @acceD[index]
-			#acceData = acceLine.split(' ')[2]
+			acceLine = @acceD[index].split(' ')
+			ad = acceLine[2]
+			addAcce(data_point, ad)
 
-			#dataAry = Array.new()
-			#sequence = 0
-			#temp = Array.new()
 		}
 	  end
 	  def addAcce(dp, data)

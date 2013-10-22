@@ -62,10 +62,10 @@ function SelectVisibleObjectControl(controlDiv, map) {
   // Setup the click event listeners: simply set the map to Chicago.
   google.maps.event.addDomListener(buttonUI, 'click', function() {
 	  alert("UI1");
-	  test();
+	  dataLoad();
   });
 }
-function test(){
+function dataLoad(){
   $.post("/pages/map/load",
 	  { name: "John", time: "2pm" },
 	  function(data){
