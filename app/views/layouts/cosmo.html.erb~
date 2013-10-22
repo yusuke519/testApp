@@ -19,13 +19,9 @@
 	<%= include_gon %>
   </head>
   <body>
-	  <div id="wrap">
-		  <div id="contents">
-			  <%= render 'shared/header4admin' %>
-			  <%= yield %>
-			  <%= render 'shared/footer' %>
-		  </div>
-	  </div>
+	  <%= render 'shared/header4admin' %>
+	  <%= yield %>
+	  <%= render 'shared/footer' %>
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
