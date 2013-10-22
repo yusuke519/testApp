@@ -13,7 +13,7 @@ body{
     min-height: 100%;
 }
 
-html,body{
+html{
      height:100%;
 }
 #wrap{
@@ -27,7 +27,8 @@ html,body{
      padding-bottom:140px; /*フッターの高さと同じ*/
 }
 #footer{
-	background-color : #000;
+	 background-color : @gray-darker;
+	 width: 100%;
      height:140px;
      position:absolute;
      bottom:0;
