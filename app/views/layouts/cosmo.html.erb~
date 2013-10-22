@@ -13,21 +13,19 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "cosmo", :media => "all" %>
+    <%= javascript_include_tag "cosmo" %>
+	<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
 
-    <%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
-
+	<%= include_gon %>
   </head>
   <body>
-
 
 	<%= render 'shared/header' %>
 	<%= yield %>
 
-
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "cosmo" %>
     <%= yield(:page_javascript) if content_for?(:page_javascript) %>
   </body>
 </html>

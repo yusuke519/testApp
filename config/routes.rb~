@@ -4,9 +4,9 @@ TestApp::Application.routes.draw do
   resources :posts
   get "pages/top"
   get "pages/map"
-  get "contact" => 'pages#contact', => :contact
-  get "about" => 'pages#about', => :about
-  get "term" => 'pages#term', => :term
+  get "contact" => 'pages#contact',:as  => :contact
+  get "about" => 'pages#about', :as => :about
+  get "term" => 'pages#term', :as => :term
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 

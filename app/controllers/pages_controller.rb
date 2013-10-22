@@ -15,6 +15,8 @@ class PagesController < ApplicationController
   def term
   end
 
+  def update
+  end
 
   def load
 	if !request.xhr?
