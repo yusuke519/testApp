@@ -21,7 +21,6 @@
   <body>
 	  <div id="wrap">
 		  <div id="contents">
-			  <%= render 'shared/header4admin' %>
 			  <%= yield %>
 		  </div>
 	  </div>
