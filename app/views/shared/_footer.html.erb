@@ -1,11 +1,13 @@
 <footer>
-<div id="footer">
+<div id="footer" class='container'>
 	<HR>
 	<div class="row">
 		<div class="col-sm-4"> Copyright (C) 2013 Yusuke Iwasawa All Rights Reserved. </div>
-		<%= link_to '  Contact  ', contact_path, :class=>"col-sm-2" %>
-		<%= link_to '  Terms  ', term_path, :class=>"col-sm-2"%>
-		<%= link_to '  About us  ', about_path, :class=>"col-sm-2"%>
-		<%= link_to '  Update information  ', about_path, :class=>"col-sm-2"%>
+		<div class="col-sm-4 col-md-offset-4">
+		<%= link_to '  Contact  ', contact_path%>
+		<%= link_to '  Terms  ', term_path%>
+		<%= link_to '  About us  ', about_path%>
+		<%= link_to '  Update information  ', about_path%>
+		<div>
 	</div
 </div>
