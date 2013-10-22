@@ -1,11 +1,7 @@
 <footer>
 <HR>
-<div style="background-color : #AAEEDD>
-	<ul style="list-style:none">
-		<li style="float:left">＜項目１行目＞</li>
-		<li style="float:left">＜項目２行目＞</li>
-		<li style="float:left">＜項目３行目＞</li>
-</ul>
+<div style="background-color : #AAEEDD">
+	<div> Copyright (C) 2013 Yusuke Iwasawa All Rights Reserved. </div>
 	<%= link_to ' contact ', contact_path%>
 	<%= link_to ' term ', term_path%>
 	<%= link_to ' about us ', about_path%>
