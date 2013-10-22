@@ -6,7 +6,7 @@ TestApp::Application.routes.draw do
   get "pages/map"
   get "contact" => 'pages#contact', => :contact
   get "about" => 'pages#about', => :about
-  get "pages/term" => 'pages#term', => :term
+  get "term" => 'pages#term', => :term
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
