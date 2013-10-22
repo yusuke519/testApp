@@ -1,9 +1,11 @@
 <footer>
-<div class="footer">
-<HR>
-	<div> Copyright (C) 2013 Yusuke Iwasawa All Rights Reserved. </div>
-	<%= link_to ' contact ', contact_path%>
-	<%= link_to ' term ', term_path%>
-	<%= link_to ' about us ', about_path%>
-	<%= link_to ' update information ', about_path%>
+<div id="footer">
+	<HR>
+	<div class="row">
+		<div class="col-sm-4"> Copyright (C) 2013 Yusuke Iwasawa All Rights Reserved. </div>
+		<%= link_to '  Contact  ', contact_path, :class=>"col-sm-2" %>
+		<%= link_to '  Terms  ', term_path, :class=>"col-sm-2"%>
+		<%= link_to '  About us  ', about_path, :class=>"col-sm-2"%>
+		<%= link_to '  Update information  ', about_path, :class=>"col-sm-2"%>
+	</div
 </div>
