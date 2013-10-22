@@ -23,9 +23,13 @@
 	<%= render 'shared/header' %>
 	<%= yield %>
 
+	<br>
+	<render 'shared/footer' %>
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <%= yield(:page_javascript) if content_for?(:page_javascript) %>
+	<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+
+
   </body>
 </html>
