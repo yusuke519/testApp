@@ -1,3 +1,8 @@
+
+<style type="text/css">
+div.topContent { margin: 50px; }
+</style>
+
 <div class="jumbotron">
   <div class="container">
 	<div class="row">
@@ -23,4 +28,6 @@
 <h1> Why you'll love Yairi Lab.</h1>
 <h5> Powerful applications to make your life more happiness</h5>
 </Center>
+
+<br>
 <render 'shared/footer' %>
