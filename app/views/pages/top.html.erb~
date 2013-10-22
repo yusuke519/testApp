@@ -24,10 +24,10 @@ div.topContent { margin: 50px; }
   </div>
 </div>
 <div class="container">
-<Center>
-	<h1> Why you'll love Yairi Lab.</h1>
-	<h5> Powerful applications to make your life more happiness</h5>
-</Center>
+	<Center>
+		<h1> Why you'll love Yairi Lab.</h1>
+		<h5> Powerful applications to make your life more happiness</h5>
+	</Center>
 </div>
 
 <br>
