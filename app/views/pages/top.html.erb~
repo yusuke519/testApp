@@ -5,7 +5,7 @@ div.topContent { margin: 50px; }
 
 <div class="jumbotron">
   <div class="container">
-	<div class="row">
+	<div class="row topContent">
 	  <div class="col-sm-8">
 		<h1> Build life happier, together. </h1>
 		<h5> Powerful applications, communication, and life-management for your great life.</h5>
@@ -30,4 +30,4 @@ div.topContent { margin: 50px; }
 </Center>
 
 <br>
-<render 'shared/footer' %>
+<%=render 'shared/footer' %>
