@@ -1,4 +1,10 @@
 <HR>
-<%= link_to 'contact', contact_path%>
-<%= link_to 'term', term_path%>
-<%= link_to 'about us', about_path%>
+<div style="background-color : #AAEEDD>
+k	
+	
+Copyright (C) 2013 Yusuke Iwasawa All Rights Reserved. 
+<%= link_to ' contact ', contact_path%>
+<%= link_to ' term ', term_path%>
+<%= link_to ' about us ', about_path%>
+<%= link_to ' update information ', about_path%>
+</div>
