@@ -7,26 +7,6 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
 // Body =======================================================================
-body,html{
-    height: 100%;
-}
-#wrap{
-     width: 100%;
-     position: relative;
-     height:auto !important; /*IE6対策*/
-     height: 100%; /*IE6対策*/
-     min-height: 100%;
-}
-#contents{
-     padding-bottom:100px; /*フッターの高さと同じ*/
-}
-#footer{
-	 background-color : @gray-darker;
-	 width: 100%;
-     height:100px;
-     position:absolute;
-     bottom:0;
-}
 
 // Navbar =====================================================================
 
