@@ -19,7 +19,11 @@
 	<%= include_gon %>
   </head>
   <body>
-	  <%= render 'shared/header4admin' %>
+	  <% if current_user %>
+		  <%= render 'shared/header4user' %>
+	  <% else %>
+		  <%= render 'shared/header4nouser' %>
+	  <% end %>
 	  <%= yield %>
 	  <%= render 'shared/footer' %>
     <!-- Javascripts
