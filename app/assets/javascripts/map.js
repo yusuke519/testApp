@@ -28,13 +28,12 @@ function HomeControl(controlDiv, map) {
   controlText.style.fontSize = '12px';
   controlText.style.paddingLeft = '4px';
   controlText.style.paddingRight = '4px';
-  controlText.innerHTML = '<strong>Home</strong>';
+  controlText.innerHTML = '<strong>Load</strong>';
   controlUI.appendChild(controlText);
 
   // Setup the click event listeners: simply set the map to Chicago.
   google.maps.event.addDomListener(controlUI, 'click', function() {
-	  alert("TEST")
-    map.setCenter(new google.maps.LatLng(35.685222, 139.729387))
+	  dataLoad();
   });
 }
 function SelectVisibleObjectControl(controlDiv, map) {
@@ -66,9 +65,20 @@ function SelectVisibleObjectControl(controlDiv, map) {
   });
 }
 function dataLoad(){
+  $('#myModal').modal({
+	keyboard: false,
+  show: true
+  });
+  var test = $("#modalTitle");
+  alert(test.text)
+  $("#modalTitle").text="Send HTTP Request";
+
+  $("#roadProgress").attr("aria-valuenow",10);
   $.post("/pages/map/load",
 	  { name: "John", time: "2pm" },
 	  function(data){
+		$("#modalTitle").html="Mapping Roaded Data";
+		$("#roadProgress").attr("aria-valuenow",40);
 		for (i = 0; i < data.length; i++){
 		  // alert("Lat: " + data[i].from_lat + ", Lng: " + data[i].from_lng);
 		  var color = "rgb(123,150,221)";
@@ -86,7 +96,8 @@ function dataLoad(){
 			});
 		  }
 		}
-		alert('OK');
+		$('#myModal').modal('hide')
+		alert("TEST");
 	  }
 	  );
 }

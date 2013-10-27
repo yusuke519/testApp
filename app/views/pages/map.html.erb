@@ -2,3 +2,32 @@
 <%= javascript_include_tag "map" %>
 <%= stylesheet_link_tag "map" %>
 <div id="map"></div>
+
+<div class="modal hide" id="waitModal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-header">
+	<h1>Processing...</h1>
+  </div>
+  <div class="modal-body">
+	<div class="progress progress-striped active">
+	  <div class="bar" style="width: 100%;"></div>
+	</div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 id="modalTitle" class="modal-title">Modal title</h4>
+	  </div>
+	  <div class="modal-body">
+		<div class="progress progress-striped active">
+		  <div id="roadProgress" class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+			<span class="sr-only">45% Complete</span>
+		  </div>
+		</div>
+	  </div>
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

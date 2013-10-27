@@ -1,26 +1,29 @@
 <div class="container">
 	<div class='row'>
-		<p id="notice"><%= notice %></p>
+	  <div class='col-sm-4'>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title"> User Profile</h3>
+		  </div>
+		  <div class="panel-body">
+			<p id="notice"><%= notice %></p>
 
-		<p>
-		<strong>Name:</strong>
-		<%= @user.name %>
-		</p>
+			<p>
+			<strong>Name:</strong>
+			<%= @user.name %>
+			</p>
 
-		<p>
-		<strong>Email:</strong>
-		<%= @user.email %>
-		</p>
+			<p>
+			<strong>Email:</strong>
+			<%= @user.email %>
+			</p>
+		  </div>
+		</div>
 
-		<p>
-		<strong>Password:</strong>
-		<%= @user.password %>
-		</p>
-
-		<p>
-		<strong>Password digest:</strong>
-		<%= @user.password_digest %>
-		</p>
+		</div>
+		<div class='col-sm-8'>
+			<h1>Right Column</h1>
+		</div>
 	</div>
 
 	<%= link_to 'Edit', edit_user_path(@user) %> |

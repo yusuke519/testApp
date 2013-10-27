@@ -1,25 +1,33 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="row">
+  <div class="col-sm-2">
+	<%= render "shared/leftMenu" %>
+  </div>
+  <div class="col-sm-7">
+	<h1>Sessions#new</h1>
 
-<div id="sessions-new">
-  <div class="form">
-    <%= form_tag sessions_path do %>
-    <div class="name">
-      <%= label_tag :name %>
-      <%= text_field_tag :name %>
-    </div>
-    <div class="password">
-      <%= label_tag :password %>
-	  <%= password_field_tag :password %>
-    </div>
-      <%= submit_tag %>
-    </div>
-    <% end %>
+	<div id="sessions-new">
+	  <div class="form-group">
+		<%= form_tag sessions_path do %>
+		  <div class="name">
+			<%= label_tag :name %>
+			<%= text_field_tag :name %>
+		  </div>
+		  <div class="password">
+			<%= label_tag :password %>
+			<%= password_field_tag :password %>
+		  </div>
+		  <%= submit_tag %>
+		<% end %>
+	  </div>
+	</div>
+  </div>
+  <div class="col-sm-3">
+	<div id="rightMenu">
+	  <ul>
+		<li>List 1</li>
+		<li>List 2</li>
+		<li>List 3</li>
+	  </ul>
+	</div>
   </div>
 </div>
-
-<% if current_user %>
-  <%= link_to current_user.name, current_user %>
-<% else %>
-  <%= link_to "Sign in", signin_path %>
-<% end %>

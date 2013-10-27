@@ -1,26 +1,54 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="row">
+  <div class="col-sm-2">
+	<%= render "shared/leftMenu" %>
+  </div>
+  <div class="col-sm-7">
+	<h1>Sign In</h1>
 
-<div id="sessions-new">
-  <div class="form">
-    <%= form_tag sessions_path do %>
-    <div class="name">
-      <%= label_tag :name %>
-      <%= text_field_tag :name %>
-    </div>
-    <div class="password">
-      <%= label_tag :password %>
-	  <%= password_field_tag :password %>
-	  <input type="password">
-    </div>
-      <%= submit_tag %>
-    </div>
-    <% end %>
+	<div id="sessions-new">
+	  <%= form_tag(sessions_path, :class => "form-horizontal") do %>
+		<div class="form-group">
+		  <label for="name" class="col-lg-2 control-label">Name</label>
+		  <div class="col-lg-10">
+			<input type="test" name="name" class="form-control" id="name" placeholder="UserName">
+		  </div>
+		</div>
+		<div class="form-group">
+		  <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
+		  <div class="col-lg-10">
+			<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+		  </div>
+		</div>
+		<div class="form-group">
+		  <div class="col-lg-offset-2 col-lg-10">
+			<div class="checkbox">
+			  <label>
+				<input type="checkbox"> Remember me
+			  </label>
+			</div>
+		  </div>
+		</div>
+		<div class="form-group">
+		  <%= label_tag :name, '', :class => "col-lg-2 control-label" %>
+		  <div class="col-lg-10">
+			<%= text_field_tag :name, :class=> "form-control" %>
+		  </div>
+		</div>
+		<div class="form-group">
+		  <%= label_tag :password %>
+		  <%= password_field_tag :password %>
+		</div>
+		<%= submit_tag %>
+	  <% end %>
+	</div>
+  </div>
+  <div class="col-sm-3">
+	<div id="rightMenu">
+	  <ul>
+		<li>List 1</li>
+		<li>List 2</li>
+		<li>List 3</li>
+	  </ul>
+	</div>
   </div>
 </div>
-
-<% if current_user %>
-  <%= link_to current_user.name, current_user %>
-<% else %>
-  <%= link_to "Sign in", signin_path %>
-<% end %>

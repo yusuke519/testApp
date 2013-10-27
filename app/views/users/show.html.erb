@@ -1,6 +1,11 @@
 <div class="container">
 	<div class='row'>
-		<div class='col-sm-4'>
+	  <div class='col-sm-4'>
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+			<h3 class="panel-title"> User Profile</h3>
+		  </div>
+		  <div class="panel-body">
 			<p id="notice"><%= notice %></p>
 
 			<p>
@@ -12,16 +17,9 @@
 			<strong>Email:</strong>
 			<%= @user.email %>
 			</p>
+		  </div>
+		</div>
 
-			<p>
-			<strong>Password:</strong>
-			<%= @user.password %>
-			</p>
-
-			<p>
-			<strong>Password digest:</strong>
-			<%= @user.password_digest %>
-			</p>
 		</div>
 		<div class='col-sm-8'>
 			<h1>Right Column</h1>

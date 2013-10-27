@@ -9,7 +9,12 @@
 // Body =======================================================================
 
 body{
-	margin-top:40px
+  margin-top:50px;
+  background-image: image-url("cream_dust.png");
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+#leftMenu{
+	margin-top: 50px;
 }
 //html,body{
 //     height:100%;
@@ -41,7 +46,32 @@ body{
 }
 
 // Typography =================================================================
+h1 {
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 40px;
+  line-height: 55px;
+}
 
+h2 {
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 35px;
+  line-height: 50px;
+}
+h4 {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 33px;
+}
+h5 {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+}
+p,div {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 25px;
+}
 .text-primary {
 	color: @brand-primary;
 }
