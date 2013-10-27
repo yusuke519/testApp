@@ -43,6 +43,9 @@ class UsersController < ApplicationController
 	
   end
 
+  def reset
+  end
+
   def register_post
 	#render :text => params
 	#render :text => params[:name]

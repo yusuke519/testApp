@@ -3,26 +3,36 @@
 	<%= render "shared/leftMenu" %>
   </div>
   <div class="col-sm-7">
-	<h1>Sessions#new</h1>
+	<h1>Sign In</h1>
 
 	<div id="sessions-new">
 	  <div class="form-group">
-		<%= form_tag sessions_path do %>
-		  <div class="name">
-			<%= label_tag :name %>
-			<%= text_field_tag :name %>
+		<%= form_tag(sessions_path, :class => "form-horizontal") do %>
+		  <div class="form-group">
+			<label for="name" class="col-lg-2 control-label">User Name</label><br>
+			<div class="col-lg-10">
+			  <input id="name" name="name" type="text" class="form-control" placeholder="User Name"/>
+			</div>
 		  </div>
-		  <div class="password">
-			<%= label_tag :password %>
-			<%= password_field_tag :password %>
+		  <div class="form-group">
+			<label for="password" class="col-lg-2 control-label">Password</label><br>
+			<div class="col-lg-10">
+			  <input id="password" name="password" type="password" class="form-control" placeholder="Password"/>
+			</div>
 		  </div>
-		  <%= submit_tag %>
+		  <div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+			  <button type="submit" class="btn btn-default">Sign In</button>
+			</div>
+		  </div>
 		<% end %>
 	  </div>
 	</div>
   </div>
   <div class="col-sm-3">
 	<div id="rightMenu">
+	  <h4> Forgot your user name or password? </h4>
+	  <%= link_to "click hear", reset_path %>
 	  <ul>
 		<li>List 1</li>
 		<li>List 2</li>

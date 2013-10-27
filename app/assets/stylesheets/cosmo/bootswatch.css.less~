@@ -7,14 +7,27 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
 // Body =======================================================================
+html, body, .wrapper, .container{
+	height:100%;
+}
 
 body{
   margin-top:50px;
-  background-image: image-url("cream_dust.png");
+  background-image: image-url("background2.png");
   font-family: 'Nobile', Helvetica, Arial, sans-serif;
 }
 #leftMenu{
 	margin-top: 50px;
+}
+#rightMenu{
+	margin-top: 50px;
+}
+.wrapper{
+  background-image: image-url("cream_dust.png");
+}
+#footer{
+  margin-left: 20px;
+  margin-right: 20px
 }
 //html,body{
 //     height:100%;
@@ -194,3 +207,4 @@ p,div {
 }
 
 // Containers =================================================================
+

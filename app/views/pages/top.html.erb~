@@ -1,32 +1,30 @@
 
 <style type="text/css">
-div.topContent { margin: 50px; }
+  div.topContent { margin: 50px; }
 </style>
 
-<div class="jumbotron">
-  <div class="container">
-	<div class="row topContent">
-	  <div class="col-sm-8">
-		<h1> Build life happier, together. </h1>
-		<h5> Powerful applications, communication, and life-management for your great life.</h5>
-	  </div>
-	  <div class="col-sm-4">
-		<form role="form">
-		  <input type="username" class="form-control" id="exampleInputUsername" placeholder="Pick a username"></input>
-		  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email"></input>
-		  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create a password"></input>
-		  <h6>Use at least one lowercase leter, one numeral, and seven characters.</h6>
-		  <button type="submit" class="btn btn-primary">Sign up for DSA</button>
-		  <h6>By clicking "Sign up for DSA", you agree to our terms of service and privacy policy. <h6>
-		</form>
+  <div class="jumbotron">
+	<div class="container">
+	  <div class="row topContent">
+		<div class="col-sm-8">
+		  <h1> Build life happier, together. </h1>
+		  <h5> Powerful applications, communication, and life-management for your great life.</h5>
+		</div>
+		<div class="col-sm-4">
+		  <form role="form">
+			<input type="username" class="form-control" id="exampleInputUsername" placeholder="Pick a username" />
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email" />
+			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create a password" />
+			<h6>Use at least one lowercase leter, one numeral, and seven characters.</h6>
+			<button type="submit" class="btn btn-primary">Sign up for DSA</button>
+			<h6>By clicking "Sign up for DSA", you agree to our terms of service and privacy policy. </h6>
+		  </form>
+		</div>
 	  </div>
 	</div>
   </div>
-</div>
-<div class="container">
-	<Center>
-		<h1> Why you'll love Yairi Lab's Projects.</h1>
-		<h5> Powerful applications to make your life more happiness</h5>
-		<p> Powerful applications to make your life more happiness</p>
-	</Center>
-</div>
+  <Center>
+	<h1> Why you'll love Yairi Lab's Projects.</h1>
+	<h5> Powerful applications to make your life more happiness</h5>
+	<p> Powerful applications to make your life more happiness</p>
+  </Center>
