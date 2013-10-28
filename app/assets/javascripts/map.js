@@ -139,14 +139,14 @@ window.onload = function() {
 
 	  var baseOptions = [{
 		featureType:'all',
-		elementType:'geometry',
-		stylers:[
-			{visibility:'on'},
-			{hue:'#00040f'},
-			{saturation:'-100'},
-			{lightness: '-20'},
-			{gamma:'0.2'}
-		]
+		elementType:'geometry'
+		//stylers:[
+		//	{visibility:'on'},
+		//	{hue:'#00040f'},
+		//	{saturation:'-100'},
+		//	{lightness: '-20'},
+		//	{gamma:'0.2'}
+		//]
 	  },{
 		featureType:'all',
 		elementType:'labels',
