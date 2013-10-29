@@ -1,7 +1,7 @@
 require 'pry'
 
 class StreamsController < ApplicationController
-	skip_before_filter :verify_authenticity_token ,:only=>[:create, :set_datam, :savefile]
+	skip_before_filter :verify_authenticity_token ,:only=>[:create, :set_data, :savefile]
 
 	def index
 		@streams = Stream.all
