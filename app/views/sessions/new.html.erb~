@@ -10,19 +10,23 @@
 		<%= form_tag(sessions_path, :class => "form-horizontal") do %>
 		  <div class="form-group">
 			<label for="name" class="col-lg-2 control-label">User Name</label><br>
-			<div class="col-lg-10">
+			<div class="col-lg-10 input-group">
+			  <span class="input-group-addon glyphicon glyphicon-user"></span>
 			  <input id="name" name="name" type="text" class="form-control" placeholder="User Name"/>
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label for="password" class="col-lg-2 control-label">Password</label><br>
-			<div class="col-lg-10">
+			<div class="col-lg-10 input-group">
+			  <span class="input-group-addon glyphicon glyphicon-star"></span>
 			  <input id="password" name="password" type="password" class="form-control" placeholder="Password"/>
 			</div>
 		  </div>
 		  <div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-			  <button type="submit" class="btn btn-default">Sign In</button>
+			  <button type="submit" class="btn btn-default">
+				Sign In
+			  </button>
 			</div>
 		  </div>
 		<% end %>
@@ -32,7 +36,7 @@
   <div class="col-sm-3">
 	<div id="rightMenu">
 	  <h4> Forgot your user name or password? </h4>
-	  <%= link_to "click hear" reset_path %>
+	  <%= link_to "click hear", reset_path %>
 	  <ul>
 		<li>List 1</li>
 		<li>List 2</li>
