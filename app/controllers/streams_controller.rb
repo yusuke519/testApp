@@ -54,10 +54,9 @@ class StreamsController < ApplicationController
 
   def set_data
 	stream = Stream.find(params[:stream_id])
-	datapoint=DataPoint.new
-	#@stream = Stream.first
+	datapoint=DataPoint.create(:stream_id => params[:stream_id])
 	#@data_point = stream.data_points.create(data_point_param)
-	@data_point = stream.data_points.create()
+	#@data_point = stream.data_points.create()
 	if @data_point.save
 	  addAcce(@data_point, params[:data])
 	  render :text => "Success"
