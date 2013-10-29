@@ -54,6 +54,7 @@ class StreamsController < ApplicationController
 
   def set_data
 	stream = Stream.find(params[:stream_id])
+	datapoint=DataPoint.new
 	#@stream = Stream.first
 	#@data_point = stream.data_points.create(data_point_param)
 	@data_point = stream.data_points.create()
