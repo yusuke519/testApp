@@ -142,9 +142,6 @@ class StreamsController < ApplicationController
 			ad = acceLine[2]
 			addAcce(data_point, ad)
 
-			#dataAry = Array.new()
-			#sequence = 0
-			#temp = Array.new()
 		}
 	  end
 	  def addAcce(dp, data)
