@@ -57,7 +57,6 @@ class StreamsController < ApplicationController
 	#@stream = Stream.first
 	#@data_point = stream.data_points.create(data_point_param)
 	@data_point = stream.data_points.create()
-	binding.pry
 	if @data_point.save
 	  addAcce(@data_point, params[:data])
 	  render :text => "Success"
