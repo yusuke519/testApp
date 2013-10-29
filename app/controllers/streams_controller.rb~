@@ -44,7 +44,7 @@ class StreamsController < ApplicationController
 	end 
 	
 	def create
-		stream = Stream.new
+		@stream = Stream.new
 		if @stream.save
 			render :text => "#{@stream.id}"
 		else
