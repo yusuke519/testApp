@@ -21,16 +21,20 @@
 	<%= include_gon %>
   </head>
   <body>
-	  <% if current_user %>
+	<div class="container">
+	  <div class="wrapper">
+		<% if current_user %>
 		  <%= render 'shared/header4user' %>
-	  <% else %>
+		<% else %>
 		  <%= render 'shared/header4nomember' %>
-	  <% end %>
-	  <%= yield %>
-	  <%= render 'shared/footer' %>
-	  <!-- Javascripts
-	  ================================================== -->
-	  <!-- Placed at the end of the document so the pages load faster -->
-	  <%= yield(:page_javascript) if content_for?(:page_javascript) %>
+		<% end %>
+		<%= yield %>
+		<%= render 'shared/footer' %>
+		<!-- Javascripts
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+	  </div>
+	</div>
   </body>
 </html>
