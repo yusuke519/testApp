@@ -8,6 +8,7 @@
 // My Setting ======================================== 
 html, body, .wrapper, .container{
 	height:100%;
+	margin:30px;
 }
 
 body{
@@ -30,33 +31,33 @@ body{
 
 
 // Typography =================================================================
-h1 {
-  font-family: 'Corben', Georgia, Times, serif;
-  font-size: 40px;
-  line-height: 55px;
-}
-
-h2 {
-  font-family: 'Corben', Georgia, Times, serif;
-  font-size: 35px;
-  line-height: 50px;
-}
-h4 {
-  font-family: 'Nobile', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  line-height: 33px;
-}
-h5 {
-  font-family: 'Nobile', Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 28px;
-}
-p,div {
-  font-family: 'Nobile', Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 25px;
-}
-
+//h1 {
+//  font-family: 'Corben', Georgia, Times, serif;
+//  font-size: 40px;
+//  line-height: 55px;
+//}
+//
+//h2 {
+//  font-family: 'Corben', Georgia, Times, serif;
+//  font-size: 35px;
+//  line-height: 50px;
+//}
+//h4 {
+//  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+//  font-size: 20px;
+//  line-height: 33px;
+//}
+//h5 {
+//  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+//  font-size: 17px;
+//  line-height: 28px;
+//}
+//p,div {
+//  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+//  font-size: 13px;
+//  line-height: 25px;
+//}
+//
 // Original
 // Journal 3.0.0
 // Bootswatch
