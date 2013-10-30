@@ -42,6 +42,8 @@ gem 'twitter-bootswatch-rails', '~> 3.0.0'
 
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
+# Flat UI
+gem 'flat-ui-rails'
 
 #heroku
 gem 'rails_12factor', group: :production

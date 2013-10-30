@@ -63,6 +63,7 @@ GEM
     debugger-ruby_core_source (1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    flat-ui-rails (0.0.2)
     gon (4.1.1)
       actionpack (>= 2.3.0)
       json
@@ -188,6 +189,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  flat-ui-rails
   gon
   jbuilder (~> 1.2)
   jquery-rails
