@@ -8,19 +8,17 @@
 </head>
 <body>
 	<div class="container">
-		<div class="wrapper">
-			<% if current_user %>
-				<%= render 'shared/header4user' %>
-			<% else %>
-				<%= render 'shared/header4nomember' %>
-			<% end %>
-			<%= yield %>
-			<%= render 'shared/footer' %>
-			<!-- Javascripts
-			================================================== -->
-			<!-- Placed at the end of the document so the pages load faster -->
-			<%= yield(:page_javascript) if content_for?(:page_javascript) %>
-		</div>
+		<% if current_user %>
+			<%= render 'shared/header4user' %>
+		<% else %>
+			<%= render 'shared/header4nomember' %>
+		<% end %>
+		<%= yield %>
+		<%= render 'shared/footer' %>
+		<!-- Javascripts
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
 	</div>
 </body>
 
