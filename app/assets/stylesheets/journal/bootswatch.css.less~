@@ -8,7 +8,6 @@
 // My Setting ======================================== 
 html, body, .wrapper, .container{
 	height:100%;
-	margin:30px;
 }
 
 body{
