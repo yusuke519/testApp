@@ -73,8 +73,8 @@ body{
 	font-family: @font-family-sans-serif;
 	font-weight: @headings-font-weight;
 	color: #000;
-
 	background-image: image-url("cream_dust.png");
+	opacity: 0.6;
 }
 
 .navbar-brand {
