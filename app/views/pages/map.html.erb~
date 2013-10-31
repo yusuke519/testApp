@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class='col-sm-2'>
-		<%=render 'shared/_leftMenu'%>
+		<%=render 'shared/leftMenu'%>
 	</div>
 	<div class='col-sm-10'>
 		<div id="map"></div>
