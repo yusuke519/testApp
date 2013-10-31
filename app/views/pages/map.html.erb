@@ -3,14 +3,13 @@
 <%= stylesheet_link_tag "map" %>
 
 <div class="row">
-	<div class='col-lg-3'>
-		<%=render 'shared/_leftMenu'%>
+	<div class='col-sm-2'>
+		<%=render 'shared/leftMenu'%>
 	</div>
-	<div class='col-lg-9'>
+	<div class='col-sm-10'>
 		<div id="map"></div>
 	</div>
 </div>
-
 
 <div class="modal hide" id="waitModal" data-backdrop="static" data-keyboard="false">
   <div class="modal-header">
