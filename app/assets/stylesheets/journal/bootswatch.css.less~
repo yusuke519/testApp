@@ -75,10 +75,18 @@ body{
 	font-weight: @headings-font-weight;
 	color: #000;
 	opacity: 0.8;
-			 background-image: image-url("cream_dust.png");
+	background-image: image-url("cream_dust.png");
 }
 
 .navbar-brand {
+	font-size: 18px;
+    font-family: 'Corben', Georgia, Times, serif;
+	font-weight: @headings-font-weight;
+	text-transform: uppercase;
+}
+//Panel
+
+.panel-heading {
 	font-size: 18px;
     font-family: 'Corben', Georgia, Times, serif;
 	font-weight: @headings-font-weight;
