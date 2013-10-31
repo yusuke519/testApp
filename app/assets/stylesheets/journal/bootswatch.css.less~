@@ -68,8 +68,9 @@ body{
 
 .navbar {
 	border-bottom: 2px solid @gray-lighter;
-	font-size: 18px;
-	font-family: @font-family-sans-serif;
+	font-size: 40px;
+	font-family: 'Nobile', Helvetica, Arial, sans-serif;
+	//font-family: @font-family-sans-serif;
 	font-weight: @headings-font-weight;
 	color: #000;
 }
