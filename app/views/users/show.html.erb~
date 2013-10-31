@@ -1,27 +1,29 @@
 <div class="container">
 	<div class='row'>
-	  <div class='col-sm-4'>
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-			<h3 class="panel-title"> User Profile</h3>
-		  </div>
-		  <div class="panel-body">
-			<p id="notice"><%= notice %></p>
-
-			<p>
-			<strong>Name:</strong>
-			<%= @user.name %>
-			</p>
-
-			<p>
-			<strong>Email:</strong>
-			<%= @user.email %>
-			</p>
-		  </div>
+		<div class='col-sm-2'>
+			<%= render 'shared/leftMenu' %>
 		</div>
+		<div class='col-sm-7'>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"> User Profile</h3>
+				</div>
+				<div class="panel-body">
+					<p id="notice"><%= notice %></p>
 
+					<p>
+					<strong>Name:</strong>
+					<%= @user.name %>
+					</p>
+
+					<p>
+					<strong>Email:</strong>
+					<%= @user.email %>
+					</p>
+				</div>
+			</div>
 		</div>
-		<div class='col-sm-8'>
+		<div class='col-sm-3'>
 			<h1>Right Column</h1>
 		</div>
 	</div>
