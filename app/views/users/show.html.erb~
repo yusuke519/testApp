@@ -4,18 +4,20 @@
 			<%= render 'shared/leftMenu' %>
 		</div>
 		<div class='col-sm-7'>
+			<h1>Profile</h1>
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title"> User Profile</h3>
 				</div>
 				<div class="panel-body">
-					<p id="notice"><%= notice %></p>
+					<table class="table">
 
+					</table>
+					<p id="notice"><%= notice %></p>
 					<p>
 					<strong>Name:</strong>
 					<%= @user.name %>
 					</p>
-
 					<p>
 					<strong>Email:</strong>
 					<%= @user.email %>
