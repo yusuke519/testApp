@@ -1,6 +1,7 @@
 
-
-<%= render "shared/leftMenu" %>
+<div class="col-sm-2">
+	<%= render "shared/leftMenu" %>
+</div>
 <div class="col-sm-9">
 	<h1>Sign In</h1>
 
