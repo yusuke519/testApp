@@ -7,8 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= yield %>
-	<!-- ... -->
 	<ul class="nav navbar-nav">
 		<li>
 		<a href="#">
@@ -18,8 +16,25 @@
 		</a>
 		</li>
 	</ul>
+	<%= yield %>
+	<!-- ... -->
 	<!-- ... -->
 	<%= render 'shared/footer' %>
+
+	<!-- Default switch -->
+	<input type="checkbox" checked data-toggle="switch" />
+
+	<!-- Square switch -->
+	<div class="switch switch-square">
+		<input type="checkbox" checked data-toggle="switch" />
+	</div>
+
+	<!-- Switch with customized icons -->
+	<div class="switch switch-square"
+		data-on-label="<i class='fui-check'></i>"
+		data-off-label="<i class='fui-cross'></i>">
+		<input type="checkbox" />
+	</div>
 	<!-- Javascripts
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
