@@ -28,7 +28,9 @@
 		<% end %>
 		<div class='container'>
 			<%= yield %>
-			<%= render 'shared/footer' %>
+			<div class='hidden-phone'>
+				<%= render 'shared/footer' %>
+			</div>
 		</div>
 		<!-- Javascripts
 		================================================== -->
