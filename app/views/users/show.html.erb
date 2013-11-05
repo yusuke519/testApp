@@ -13,8 +13,8 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Attribute</th>
-								<th>Value</th>
+								<th></th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -24,25 +24,30 @@
 							</tr>
 
 							<tr>
-								<td>Email</td>
-								<td><%= @user.email %></td>
+								<td>Count</td>
+								<td>72</td>
+							</tr>
+							<tr>
+								<td>Total Time</td>
+								<td>4 h 15 m 30 s</td>
+							</tr>
+							<tr>
+								<td>Last Update</td>
+								<td>NOV.7.2013</td>
+							</tr>
+							<tr>
+								<td>Place</td>
+								<td>Kioicho(Estimated)</td>
 							</tr>
 						</tbody>
 					</table>
 					<p id="notice"><%= notice %></p>
-					<p>
-					<strong>Name:</strong>
-					<%= @user.name %>
-					</p>
-					<p>
-					<strong>Email:</strong>
-					<%= @user.email %>
-					</p>
 				</div>
 			</div>
 		</div>
 		<div class='col-sm-3'>
-			<h1>Activities</h1>
+		  <h1>Activities</h1>
+		  <%= link_to 'Activity', :action => "activity" %>
 		</div>
 	</div>
 

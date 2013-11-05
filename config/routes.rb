@@ -12,6 +12,7 @@ TestApp::Application.routes.draw do
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
+  get 'users/:id/activity' => 'users#activity', :as => :activity
   get 'reset' => 'users#reset', :as => :reset
   get 'signup' => 'users#new', :as => :signup
   get 'signin' => 'sessions#new', :as => :signin
