@@ -1,10 +1,11 @@
 require 'pry'
 class PagesController < ApplicationController
+	layout "cosmo2"
   def top
   end
 
   def map
-	  render :template => 'layouts/cosmo4map'
+
   end
 
   def contact

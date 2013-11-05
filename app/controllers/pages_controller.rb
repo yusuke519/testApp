@@ -1,9 +1,11 @@
 require 'pry'
 class PagesController < ApplicationController
+	layout "cosmo2" :only =>[:map]
   def top
   end
 
   def map
+
   end
 
   def contact
