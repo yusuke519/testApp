@@ -26,9 +26,12 @@
 		<% else %>
 			<%= render 'shared/header4nomember' %>
 		<% end %>
-		<div class='container'>
-			<%= yield %>
-			<div class='hidden-phone'>
+		<div class='wrapper'>
+			<div class='container'>
+				<%= yield %>
+			</div>
+			<HR>
+			<div class ='container'>
 				<%= render 'shared/footer' %>
 			</div>
 		</div>
