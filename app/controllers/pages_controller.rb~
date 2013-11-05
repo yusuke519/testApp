@@ -1,6 +1,6 @@
 require 'pry'
 class PagesController < ApplicationController
-	layout "cosmo2", :only =>[:map]
+	layout "cosmo", :only =>[:map]
 	def top
 	end
 
