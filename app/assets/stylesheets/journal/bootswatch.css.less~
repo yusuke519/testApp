@@ -13,7 +13,7 @@ html, body, .wrapper, .container{
 body{
   padding-top:60px;
   background-image: image-url("cream_dust.png");
-  margin-bottom: 100px;
+  margin-bottomn: 60px;
 }
 #leftMenu{
 	margin-top: 70px;
@@ -26,9 +26,6 @@ body{
   background-image: image-url("cream_dust.png");
 }
 .footer{
-  position: absolute;
-  bottom: 0;
-  height: 100xp;
   margin-left: 20px;
   margin-right: 20px
 }
