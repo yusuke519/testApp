@@ -6,7 +6,7 @@
 
 
 // My Setting ======================================== 
-html, body, .wrapper, .container{
+html, .wrapper, .container{
 	height:100%;
 }
 
