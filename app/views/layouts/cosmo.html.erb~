@@ -17,8 +17,6 @@
 	<%= stylesheet_link_tag "cosmo", :media => "all" %>
 	<%= javascript_include_tag "cosmo" %>
 	<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="./footerFixed.js"></script>
 	<%= include_gon %>
   </head>
   <body>

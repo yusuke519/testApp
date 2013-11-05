@@ -28,7 +28,6 @@ body{
 .footer{
   margin-left: 20px;
   margin-right: 20px
-  background-image: image-url("binding_dark.png");
 }
 
 
