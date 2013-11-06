@@ -24,6 +24,10 @@
 							</tr>
 
 							<tr>
+								<td>Email</td>
+								<td><%= @user.email %></td>
+							</tr>
+							<tr>
 								<td>Count</td>
 								<td>72</td>
 							</tr>
@@ -41,7 +45,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
+					<button type="button" class="btn btn-primary">Edit</button>
 					<p id="notice"><%= notice %></p>
 				</div>
 			</div>
@@ -49,6 +53,36 @@
 		<div class='col-sm-3'>
 			<h1>Activities</h1>
 			<%= link_to 'Activity', :action => "activity" %>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"> 2013.11.07 Around Kioicho</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Date</td>
+								<td>NOV.7.2013</td>
+							</tr>
+							<tr>
+								<td>Place</td>
+								<td>Kioicho(Estimated)</td>
+							</tr>
+							<tr>
+								<td>Time</td>
+								<td>1h15m20s</td>
+							</tr>
+						</tbody>
+					</table>
+					<button type="button" class="btn btn-primary">Edit</button>
+					<p id="notice"><%= notice %></p>
+				</div>
 		</div>
 	</div>
 
