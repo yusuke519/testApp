@@ -6,22 +6,23 @@
 	<div id="map">
 	</div>
 	<div id="information">
-	<div class="panel panel-default">
-		<div class="panel-body">
-			Panel content
+		<div class="panel panel-default">
+			<div class="panel-body">
+				Panel content
+			</div>
 		</div>
+		<Center>
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</Center>
 	</div>
-	<Center>
-		<ul class="pagination">
-			<li><a href="#">&laquo;</a></li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">&raquo;</a></li>
-		</ul>
-	</Center>
 </div>
 
 

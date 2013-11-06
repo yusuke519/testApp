@@ -26,8 +26,7 @@ body{
   background-image: image-url("cream_dust.png");
 }
 .footer{
-  margin-left: 20px;
-  margin-right: 20px
+  padding:20px;
 }
 
 
@@ -92,6 +91,9 @@ body{
     font-family: 'Corben', Georgia, Times, serif;
 	font-weight: @headings-font-weight;
 	text-transform: uppercase;
+	opacity:0.6;
+}
+.panel{
 	opacity:0.6;
 }
 
