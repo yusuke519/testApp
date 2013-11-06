@@ -41,14 +41,14 @@
 							</tr>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-primary">Edit</button>
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
 					<p id="notice"><%= notice %></p>
 				</div>
 			</div>
 		</div>
 		<div class='col-sm-3'>
-		  <h1>Activities</h1>
-		  <%= link_to 'Activity', :action => "activity" %>
+			<h1>Activities</h1>
+			<%= link_to 'Activity', :action => "activity" %>
 		</div>
 	</div>
 
