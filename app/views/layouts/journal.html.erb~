@@ -31,9 +31,7 @@
 				<%= yield %>
 			</div>
 			<HR>
-			<div class ='container'>
-				<%= render 'shared/footer' %>
-			</div>
+			<%= render 'shared/footer' %>
 		</div>
 		<!-- Javascripts
 		================================================== -->
