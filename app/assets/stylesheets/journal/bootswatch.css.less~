@@ -94,7 +94,7 @@ body{
 	opacity:0.6;
 }
 .panel{
-	opacity:0.6;
+	opacity:0.9;
 }
 
 // Buttons ====================================================================
@@ -171,4 +171,11 @@ h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 	}
 	background-image: image-url("binding_dark.png");
+}
+
+//Modal
+
+.modal-header {
+
+
 }
