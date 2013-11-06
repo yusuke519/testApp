@@ -64,7 +64,7 @@ function SelectVisibleObjectControl(controlDiv, map) {
 	  dataLoad();
   });
   google.maps.event.addDomListener(buttonUI2, 'click', function() {
-	  showFilterModal;
+	  showFilterModal();
   });
 }
 function showFilterModal(){
