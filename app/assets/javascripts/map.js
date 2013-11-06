@@ -53,7 +53,7 @@ function SelectVisibleObjectControl(controlDiv, map) {
   
   var buttonUI2 = document.createElement("button");
   buttonUI2.className = "btn btn-primary"
-  buttonUI.setAttribute("value","OK")
+  buttonUI2.setAttribute("value","OK")
   buttonUI2.setAttribute("type", "button")
   controlUI.appendChild(buttonUI2)
 
@@ -63,17 +63,21 @@ function SelectVisibleObjectControl(controlDiv, map) {
 	  alert("UI1");
 	  dataLoad();
   });
+  google.maps.event.addDomListener(buttonUI2, 'click', function() {
+	  showFilterModal;
+  });
+}
+function showFilterModal(){
+  $('#filterModal').modal({
+	  keyboard: false,
+  	  show: true
+  });
 }
 function dataLoad(){
   $('#myModal').modal({
 	keyboard: false,
-  show: true
+  	show: true
   });
-  var test = $("#modalTitle");
-  alert(test.text)
-  $("#modalTitle").text="Send HTTP Request";
-
-  $("#roadProgress").attr("aria-valuenow",10);
   $.post("/pages/map/load",
 	  { name: "John", time: "2pm" },
 	  function(data){
