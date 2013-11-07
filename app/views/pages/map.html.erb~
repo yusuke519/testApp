@@ -55,6 +55,7 @@
 			  <option>Yusuke</option>
 			  <option>Goto</option>
 			  <% @users.each do |user| %>
+				  <option>user.name</option>
 			  <% end %>
 
 		  </select>
