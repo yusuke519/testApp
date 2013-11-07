@@ -81,3 +81,6 @@ gem 'gon'
 
 # Highchart.jsを使用可能に
 # gem 'lazy_high_charts'
+#
+gem "bootstrap-switch-rails"
+
