@@ -230,7 +230,6 @@ window.onload = function() {
 };
 
 function setDatePicker(){
-	$('datepicker').datepicker({
-		startDate: '-3d'
+	$('#sandbox-container .input-daterange').datepicker({
 	});
 }
