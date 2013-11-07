@@ -230,5 +230,9 @@ window.onload = function() {
 };
 
 function setDatePicker(){
-	$('datepicker').datepicker();
+	var datepicker = $.fn.datepicker.noConflict();
+	$.fn.bootstrapDP = datepicker;
+	$('datepicker').datepicker({
+		startDate: '-3d'
+	});
 }

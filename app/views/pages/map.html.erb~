@@ -112,7 +112,7 @@
 				  </div>
 				  <div class="col-sm-1">
 				  <div class="col-sm-3" id="to">
-					  <input type="text" data-behaviour='datepicker' >
+					  <input class='datepicker' type="text" data-behaviour='datepicker' >
 				  </div>
 			  </div>
 

@@ -106,6 +106,7 @@ function dataLoad(){
 	  );
 }
 window.onload = function() {
+	setDatePicker();
   rangeStart = 0;
   rangeEnd = 100;
   mapJS = {
@@ -229,5 +230,6 @@ window.onload = function() {
 };
 
 function setDatePicker(){
+	var datepicker = $.fn.datepicker.noConflict();
 	$('datepicker').datepicker();
 }
