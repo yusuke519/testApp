@@ -48,17 +48,32 @@
         <h4 class="modal-title" id="filterModalLabel">Filter</h4>
       </div>
 	  <div class="modal-body">
-		  <div class="make-switch" data-on="danger">
-			  <input type="checkbox" checked>
-		  </div>
-		  <select class="form-control">
-			  <option>Yusuke</option>
-			  <option>Goto</option>
-			  <% @users.each do |user| %>
-				  <option><%= user.name %></option>
-			  <% end %>
+		  <form class="form-horizontal" role="form">
+			  <div class="form-group">
+				  <label for="stop" class="col-sm-2 control-label">Stop</label>
+				  <div class="col-sm-2">
+					  <div class="make-switch" data-on="danger" id="stop">
+						  <input type="checkbox" checked>
+					  </div>
+				  </div>
+				  <label for="bump" class="col-sm-2 control-label">Bump</label>
+				  <div class="col-sm-2">
+					  <div class="make-switch" data-on="danger" id="bump">
+						  <input type="checkbox" checked>
+					  </div>
+				  </div>
+				  <label for="slope" class="col-sm-2 control-label">Slope</label>
+				  <div class="col-sm-2">
+					  <div class="make-switch" data-on="danger" id="slope">
+						  <input type="checkbox" checked>
+					  </div>
+				  </div>
+			  <select class="form-control">
+				  <option>All User</option>
+				  <option>You</option>
+			  </select>
 
-		  </select>
+		  </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
