@@ -1,11 +1,10 @@
 require 'pry'
 class PagesController < ApplicationController
-	layout "cosmo", :only =>[:map]
 	def top
 	end
 
 	def map
-
+		@users = User.all
 	end
 
 	def contact
