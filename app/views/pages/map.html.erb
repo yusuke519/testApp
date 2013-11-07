@@ -49,7 +49,7 @@
       </div>
 	  <div class="modal-body">
 		  <form class="form-horizontal" role="form">
-			  <h2>Type</h2>
+			  <h4>Type</h4>
 			  <div class="form-group">
 				  <label for="stop" class="col-sm-3 control-label">Stop</label>
 				  <div class="col-sm-3">
@@ -78,11 +78,27 @@
 					  </div>
 				  </div>
 			  </div>
-			  <h2>Data Source</h2>
+			  <h4>Data Source</h4>
 			  <div class="form-group">
-				  <div class="col-sm-12">
+				  <label for="user" class="col-sm-3 control-label"> User </label>
+				  <div class="col-sm-9" id="user">
 					  <select class="form-control">
 						  <option>All User</option>
+						  <option>You</option>
+					  </select>
+				  </div>
+			  </div>
+			  <label for="interval" class="col-sm-12 control-label"> Snterval </label>
+			  <div class="form-group">
+				  <div class="col-sm-6" id="interval">
+					  <select class="form-control">
+						  <option>All interval</option>
+						  <option>You</option>
+					  </select>
+				  </div>
+				  <div class="col-sm-6" id="interval">
+					  <select class="form-control">
+						  <option>All interval</option>
 						  <option>You</option>
 					  </select>
 				  </div>
