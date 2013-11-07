@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 	end
 
 	def map
-		@users = User.all(:include => :name)
+		@users = User.all
 	end
 
 	def contact
