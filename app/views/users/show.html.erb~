@@ -45,7 +45,9 @@
 							</tr>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-primary">Edit</button>
+					<div Align="right">
+						<button type="button" class="btn btn-primary">Edit</button>
+					</div>
 					<p id="notice"><%= notice %></p>
 				</div>
 			</div>
