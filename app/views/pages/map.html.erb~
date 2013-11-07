@@ -51,25 +51,34 @@
 		  <form class="form-horizontal" role="form">
 			  <h2>Type</h2>
 			  <div class="form-group">
-				  <label for="stop" class="col-sm-2 control-label">Stop</label>
-				  <div class="col-sm-2">
+				  <label for="stop" class="col-sm-3 control-label">Stop</label>
+				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="stop">
 						  <input type="checkbox" checked>
 					  </div>
 				  </div>
-				  <label for="bump" class="col-sm-2 control-label">Bump</label>
-				  <div class="col-sm-2">
+				  <label for="bump" class="col-sm-3 control-label">Bump</label>
+				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="bump">
 						  <input type="checkbox" checked>
 					  </div>
 				  </div>
-				  <label for="slope" class="col-sm-2 control-label">Slope</label>
-				  <div class="col-sm-2">
+				  <label for="slope" class="col-sm-3 control-label">Slope</label>
+				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="slope">
 						  <input type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
+			  <div class="form-group">
+				  <label for="slope" class="col-sm-3 control-label">Slope</label>
+				  <div class="col-sm-3">
+					  <div class="make-switch" data-on="danger" id="slope">
+						  <input type="checkbox" checked>
+					  </div>
+				  </div>
+			  </div>
+			  <h2>Data Source</h2>
 			  <div class="form-group">
 				  <div class="col-sm-12">
 					  <select class="form-control">
