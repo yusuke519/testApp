@@ -21,6 +21,7 @@
 		<%= include_gon %>
 	</head>
 	<body>
+		<%= render 'shared/header' %>
 		<% if current_user %>
 			<%= render 'shared/header4user' %>
 		<% else %>
@@ -30,8 +31,9 @@
 			<div class='container'>
 				<%= yield %>
 			</div>
-			<div class="col-sm-12 hidden-xs"
-			<%= render 'shared/footer' %>
+			<div class="col-sm-12 hidden-xs">
+				<%= render 'shared/footer' %>
+			</div>
 		</div>
 		<!-- Javascripts
 		================================================== -->

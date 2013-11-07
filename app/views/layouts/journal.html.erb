@@ -21,11 +21,7 @@
 		<%= include_gon %>
 	</head>
 	<body>
-		<% if current_user %>
-			<%= render 'shared/header4user' %>
-		<% else %>
-			<%= render 'shared/header4nomember' %>
-		<% end %>
+		<%= render 'shared/header' %>
 		<div class='wrapper'>
 			<div class='container'>
 				<%= yield %>
