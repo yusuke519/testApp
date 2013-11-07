@@ -81,6 +81,10 @@ class StreamsController < ApplicationController
 
   end
 
+  def sensor
+
+  end
+
   private
   #本当はモデルの機能として持たせるべきな気がする
   def addAcce(dp, data)

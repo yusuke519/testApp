@@ -12,7 +12,7 @@ TestApp::Application.routes.draw do
   post 'pages/map/load' => 'pages#load'
   root 'pages#top'
 
-  get 'users/:id/activity_list' => 'users#activity', :as => :activity
+  get 'users/:id/activity' => 'users#activity', :as => :activity
   get 'reset' => 'users#reset', :as => :reset
   get 'signup' => 'users#new', :as => :signup
   get 'signin' => 'sessions#new', :as => :signin
@@ -24,6 +24,7 @@ TestApp::Application.routes.draw do
   get 'streams' => 'streams#index'
   post 'streams' => 'streams#create' 
   post 'streams/set' => 'streams#set_data' 
+  get 'streams/sensor' => 'streams#index'
   get 'streams/selectfile' => 'streams#selectfile'
   post 'streams/savefile' => 'streams#savefile'
   get 'streams/:id' => 'streams#show'

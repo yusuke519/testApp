@@ -24,6 +24,7 @@ TestApp::Application.routes.draw do
   get 'streams' => 'streams#index'
   post 'streams' => 'streams#create' 
   post 'streams/set' => 'streams#set_data' 
+  get 'streams/sensor' => 'streams#sensor'
   get 'streams/selectfile' => 'streams#selectfile'
   post 'streams/savefile' => 'streams#savefile'
   get 'streams/:id' => 'streams#show'
