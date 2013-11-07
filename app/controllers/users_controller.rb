@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :activity, :edit, :update, :destroy]
+  before_action :check_user, except: [:new]
   skip_before_filter :verify_authenticity_token ,:only=>[:register_post, :set_data]
   # GET /users
   # GET /users.json
@@ -96,6 +97,13 @@ class UsersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_user
 	  @user = User.find(params[:id])
+  end
+  def check_user
+	  if current_user
+
+	  else
+		render 'sessions/new'
+	  end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
