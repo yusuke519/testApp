@@ -5,3 +5,5 @@
 //= require journal/loader
 //= require journal/bootswatch
 //= require bootstrap-switch
+//= require bootstrap-datepicker
+//

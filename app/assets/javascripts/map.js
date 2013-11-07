@@ -106,6 +106,7 @@ function dataLoad(){
 	  );
 }
 window.onload = function() {
+	setDatePicker();
   rangeStart = 0;
   rangeEnd = 100;
   mapJS = {
@@ -227,3 +228,7 @@ window.onload = function() {
   mapJS.init();
   return fileJS.init();
 };
+
+function setDatePicker(){
+	$('datepicker').datepicker();
+}

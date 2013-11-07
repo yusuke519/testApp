@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 8400591e149d0e9f50957c76fe7f51a73972b887
+  specs:
+    bootstrap-datepicker-rails (1.1.1.9)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/rails/activerecord-session_store.git
   revision: 022d45b4ae9b7e862ee92ea8871c9bf4c2d93106
   specs:
@@ -189,6 +196,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   better_errors
   binding_of_caller
+  bootstrap-datepicker-rails!
   bootstrap-switch-rails
   coffee-rails (~> 4.0.0)
   flat-ui-rails

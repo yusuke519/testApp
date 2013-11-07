@@ -64,7 +64,7 @@ function SelectVisibleObjectControl(controlDiv, map) {
 	  dataLoad();
   });
   google.maps.event.addDomListener(buttonUI2, 'click', function() {
-	  showFilterModal;
+	  showFilterModal();
   });
 }
 function showFilterModal(){
@@ -227,3 +227,7 @@ window.onload = function() {
   mapJS.init();
   return fileJS.init();
 };
+
+function setDatePicker(){
+	$('datepicker').datepicker();
+}
