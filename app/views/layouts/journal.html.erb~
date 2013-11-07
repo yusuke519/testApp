@@ -30,7 +30,7 @@
 			<div class='container'>
 				<%= yield %>
 			</div>
-			<HR>
+			<div class="col-sm-12 hidden-xs"
 			<%= render 'shared/footer' %>
 		</div>
 		<!-- Javascripts

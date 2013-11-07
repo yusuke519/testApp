@@ -37,12 +37,7 @@
 	<div id="rightMenu">
 		<h5> Forgot your user name or password? </h5>
 		<div Align="right"><%= link_to "click hear", reset_path %></div>
-		<h5> Forgot your user name or password? </h5>
+		<h5> Do you want to create new account? </h5>
 		<div Align="right"><%= link_to "click hear", signup_path %></div>
-		<ul>
-			<li>List 1</li>
-			<li>List 2</li>
-			<li>List 3</li>
-		</ul>
 	</div>
 </div>
