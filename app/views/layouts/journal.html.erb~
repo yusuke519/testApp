@@ -30,11 +30,21 @@
 				<%= render 'shared/footer' %>
 			</div>
 		</div>
+
+		<a href="#" id="triggerLink">メニュー</a>
 		<!-- Javascripts
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<%= javascript_include_tag "journal" %>
 		<%= javascript_include_tag "jquery.sidr.dark" %>
 		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+
+		<script type="text/javascript" charset="UTF-8">
+			$(document).ready(function() {
+					$('#triggerLink').sidr({
+source: '#navigation'
+});
+					});
+				</script>
 	</body>
 </html>

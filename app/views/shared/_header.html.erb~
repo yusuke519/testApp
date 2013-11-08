@@ -34,9 +34,9 @@
 
 
 <script type="text/javascript" charset="UTF-8">
-		$(document).ready(function() {
+	$(document).ready(function() {
 			$('#triggerLink').sidr({
-				source: '#navigation'
+			source: '#navigation'
 			});
-		});
-		</script>
+	});
+</script>

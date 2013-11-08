@@ -38,5 +38,13 @@
 		<%= javascript_include_tag "journal" %>
 		<%= javascript_include_tag "jquery.sidr.dark" %>
 		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+
+		<script type="text/javascript" charset="UTF-8">
+			$(document).ready(function() {
+				$('#triggerLink').sidr({
+					source: '#navigation'
+				});
+			});
+		</script>
 	</body>
 </html>
