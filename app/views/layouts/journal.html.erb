@@ -15,9 +15,9 @@
 		<![endif]-->
 
 		<%= stylesheet_link_tag "journal", :media => "all" %>
-		<%= javascript_include_tag "journal" %>
 		<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
 
+		<%= stylesheet_link_tag	"jquery.sidr.dark", :media => "all" %>
 		<%= include_gon %>
 	</head>
 	<body>
@@ -33,6 +33,8 @@
 		<!-- Javascripts
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
+		<%= javascript_include_tag "journal" %>
+		<%= javascript_include_tag "jquery.sidr.dark" %>
 		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
 	</body>
 </html>
