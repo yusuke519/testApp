@@ -41,3 +41,4 @@
 		<div Align="right"><%= link_to "click hear", signup_path %></div>
 	</div>
 </div>
+<a href="http://amazon.com/" class="lsf-icon">Amazon</a>
