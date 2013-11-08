@@ -36,7 +36,7 @@
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<%= javascript_include_tag "journal" %>
-		<%= javascript_include_tag "jquery.sidr" %>
+		<%= javascript_include_tag "jquery.sidr.min" %>
 		<%= yield(:page_javascript) if content_for?(:page_javascript) %>
 
 		<script type="text/javascript" charset="UTF-8">
