@@ -10,15 +10,16 @@
 	  <%= link_to 'DSA', root_path, :class=>"navbar-brand" %>
 	</div>
 	<div class="navbar-collapse collapse">
-	  <ul class="nav navbar-nav">
-	  </ul>
-	  <% if current_user %>
-		  <ul class="nav navbar-nav navbar-right">
-			  <li><%= link_to "Profile", current_user %></li>
-			  <li><%= link_to "Sign Out", signout_path %></li>
-		  </ul>
-	  <% else %>
-	  <form class="navbar-form navbar-right">
+		<ul class="nav navbar-nav">
+			<li class="visible-phone"><%= link_to "Sensor", streams_sensor_path %></li>
+		</ul>
+		<% if current_user %>
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "Profile", current_user %></li>
+				<li><%= link_to "Sign Out", signout_path %></li>
+			</ul>
+		<% else %>
+			<form class="navbar-form navbar-right">
 		<a type="input"  
 		  href="/signup" 
 		  class="btn btn-primary"> Sign Up</a>
