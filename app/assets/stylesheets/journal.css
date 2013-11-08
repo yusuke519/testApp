@@ -3,7 +3,7 @@
  *= require_self
  *= require journal/loader
  *= require journal/bootswatch
- *= require icon/style
  *= require bootstrap-switch
  *= require bootstrap-datepicker
+ *= require icon/style
 */
