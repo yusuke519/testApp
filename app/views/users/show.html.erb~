@@ -83,11 +83,12 @@
 							</tbody>
 						</table>
 						<div Align="right">
+							<%= link_to "Show Map"
 							<button type="button" class="btn btn-primary">Show Map</button>
 						</div>
 					</div>
 				</div>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
