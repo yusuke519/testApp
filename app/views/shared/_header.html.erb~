@@ -35,8 +35,8 @@
 
 <script type="text/javascript" charset="UTF-8">
 	$(document).ready(function() {
-			$('#triggerLink').sidr({
+		$('#triggerLink').sidr({
 			source: '#navigation'
-			});
+		});
 	});
 </script>
