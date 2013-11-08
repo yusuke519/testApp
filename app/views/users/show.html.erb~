@@ -53,99 +53,37 @@
 		</div>
 		<div class='col-sm-4'>
 			<h1>Activities</h1>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"> 2013.11.07 Around Kioicho</h3>
-				</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<th></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Date</td>
-								<td>NOV.7.2013</td>
-							</tr>
-							<tr>
-								<td>Place</td>
-								<td>Kioicho(Estimated)</td>
-							</tr>
-							<tr>
-								<td>Time</td>
-								<td>1h15m20s</td>
-							</tr>
-						</tbody>
-					</table>
-					<div Align="right">
-						<button type="button" class="btn btn-primary">Show Map</button>
+			<% @streams.each do |stream| %>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"> 2013.11.07 Around Kioicho</h3>
 					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"> 2013.11.07 Around Kioicho</h3>
-				</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<th></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Date</td>
-								<td>NOV.7.2013</td>
-							</tr>
-							<tr>
-								<td>Place</td>
-								<td>Kioicho(Estimated)</td>
-							</tr>
-							<tr>
-								<td>Time</td>
-								<td>1h15m20s</td>
-							</tr>
-						</tbody>
-					</table>
-					<div Align="right">
-						<button type="button" class="btn btn-primary">Show Map</button>
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"> 2013.11.07 Around Kioicho</h3>
-				</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<th></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Date</td>
-								<td>NOV.7.2013</td>
-							</tr>
-							<tr>
-								<td>Place</td>
-								<td>Kioicho(Estimated)</td>
-							</tr>
-							<tr>
-								<td>Time</td>
-								<td>1h15m20s</td>
-							</tr>
-						</tbody>
-					</table>
-					<div Align="right">
-						<button type="button" class="btn btn-primary">Show Map</button>
+					<div class="panel-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Date</td>
+									<td><%= stream.created_at %></td>
+								</tr>
+								<tr>
+									<td>Place</td>
+									<td>Kioicho(Estimated)</td>
+								</tr>
+								<tr>
+									<td>Time</td>
+									<td>1h15m20s</td>
+								</tr>
+							</tbody>
+						</table>
+						<div Align="right">
+							<button type="button" class="btn btn-primary">Show Map</button>
+						</div>
 					</div>
 				</div>
 			</div>
