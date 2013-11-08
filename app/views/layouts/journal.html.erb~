@@ -17,7 +17,7 @@
 		<%= stylesheet_link_tag "journal", :media => "all" %>
 		<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
 
-		<%= stylesheet_link_tag	"jquery.sidr.dark" %>
+		<%= stylesheet_link_tag	"jquery.sidr.dark", :media => "all" %>
 		<%= include_gon %>
 	</head>
 	<body>
