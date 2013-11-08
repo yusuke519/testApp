@@ -52,6 +52,7 @@
 			</div>
 		</div>
 		<div class='col-sm-4'>
+
 			<h1>Activities</h1>
 			<% @streams.each do |stream| %>
 				<div class="panel panel-default">
