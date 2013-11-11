@@ -45,6 +45,9 @@ class StreamsController < ApplicationController
 
 	def create
 		params[:from_lat] = params[:from_lat].to_f
+		params[:from_lng] = params[:from_lng].to_f
+		params[:to_lat] = params[:to_lat].to_f
+		params[:to_lng] = params[:to_lng].to_f
 		@user = User.find(params[:user_id])
 		@stream = @user.streams.create()
 		if @stream.save
