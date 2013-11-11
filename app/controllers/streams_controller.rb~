@@ -44,6 +44,7 @@ class StreamsController < ApplicationController
 	end 
 
 	def create
+		params[:from_lat] = params[:from_lat].to_f
 		@user = User.find(params[:user_id])
 		@stream = @user.streams.create()
 		if @stream.save
@@ -55,11 +56,7 @@ class StreamsController < ApplicationController
 
 	def set_data
 		stream = Stream.find(params[:stream_id])
-		#dp = DataPoint.new()
-		#datapoint=DataPoint.create(:stream_id => params[:stream_id])
-		#@stream = Stream.first
 		@data_point = stream.data_points.create(data_point_param)
-		#@data_point = stream.data_points.create()
 		if @data_point.save
 			addAcce(@data_point, params[:data])
 			render :text => "Success"
@@ -196,6 +193,6 @@ class StreamsController < ApplicationController
 	end
 
 	def data_point_param
-		params.permit(:start_time, :stop_time, :data_type)
+		params.permit(:start_time, :stop_time, :data_typ)
 	end
 end

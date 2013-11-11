@@ -44,6 +44,7 @@ class StreamsController < ApplicationController
 	end 
 
 	def create
+		params[:from_lat] = params[:from_lat].to_f
 		@user = User.find(params[:user_id])
 		@stream = @user.streams.create()
 		if @stream.save
@@ -192,6 +193,6 @@ class StreamsController < ApplicationController
 	end
 
 	def data_point_param
-		params.permit(:start_time, :stop_time, :data_type)
+		params.permit(:start_time, :stop_time, :data_typ, :from_lat)
 	end
 end
