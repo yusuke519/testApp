@@ -60,7 +60,7 @@
 				  <label for="bump" class="col-sm-3 control-label">Bump</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="bump">
-						  <input name="bump" type="checkbox" checked>
+						  <input id="bumpC" name="bump" type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
@@ -68,13 +68,13 @@
 				  <label for="slope" class="col-sm-3 control-label">Slope</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="slope">
-						  <input name="slope" type="checkbox" checked>
+						  <input id="slopeC" name="slope" type="checkbox" checked>
 					  </div>
 				  </div>
 				  <label for="side_slope" class="col-sm-3 control-label">Side Slope</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="sslope">
-						  <input name="sslope" type="checkbox" checked>
+						  <input id="sslopeC" name="sslope" type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
@@ -125,22 +125,22 @@
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
 	  alert($("#stopC").prop('checked'));
-	  alert($("#stopC").attr('checked'));
-
 	  
-	  //var temp = $("input[name='stop']").val(),
-	  //var params:[
-	  //  source:$("select[name='source']").val(),
-	  //  stop:$("input[name='stop']").val(),
-	  //  //filter:[
-	  //  //  stop:$("input[name='stop']").val(),
-	  //  //  bump:$("input[name='bump']").val(),
-	  //  //  slope:$("input[name='slope']").val(),
-	  //  //  sslope:$("input[name='sslope']").val(),
-	  //  //  ],
-	  //  //start:$("input[name='start']").val(),
-	  //  //end:$("input[name='end']").val(),
-	  //];
+	  var params:[
+	    source:$("select[name='source']").val(),
+	    stop:$("#stopC").prop('checked')),
+	    bump:$("#bumpC").prop('checked')),
+	    slope:$("#slopeC").prop('checked')),
+	    sslope:$("#sslopeC").prop('checked')),
+	    //filter:[
+	    //  stop:$("input[name='stop']").val(),
+	    //  bump:$("input[name='bump']").val(),
+	    //  slope:$("input[name='slope']").val(),
+	    //  sslope:$("input[name='sslope']").val(),
+	    //  ],
+	    //start:$("input[name='start']").val(),
+	    //end:$("input[name='end']").val(),
+	  ];
 	}
   </script>
 <% end %>
