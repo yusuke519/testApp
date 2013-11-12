@@ -125,6 +125,11 @@
 	  alert(Document.stop);
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
+	  var params{
+		source:$("select[name='source']").val(),
+		stop:$("select[name='stop']").val(),
+	  };
+	  alert(params)
 	}
   </script>
 <% end %>
