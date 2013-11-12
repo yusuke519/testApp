@@ -125,7 +125,7 @@
 	  alert(Document.stop);
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
-	  var temp = stop:$("input[name='stop']").val(),
+	  var temp = $("input[name='stop']").val(),
 	  //var params:[
 	  //  source:$("select[name='source']").val(),
 	  //  stop:$("input[name='stop']").val(),
@@ -138,7 +138,6 @@
 	  //  //start:$("input[name='start']").val(),
 	  //  //end:$("input[name='end']").val(),
 	  //];
-	  alert(params)
 	}
   </script>
 <% end %>
