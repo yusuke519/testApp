@@ -127,15 +127,15 @@
 	  alert(val1);
 	  var params:[
 		source:$("select[name='source']").val(),
-		stop:$("select[name='stop']").val(),
+		stop:$("input[name='stop']").val(),
 		filter:[
-		  stop:$("select[name='stop']").val(),
-		  bump:$("select[name='bump']").val(),
-		  slope:$("select[name='slope']").val(),
-		  sslope:$("select[name='sslope']").val(),
+		  stop:$("input[name='stop']").val(),
+		  bump:$("input[name='bump']").val(),
+		  slope:$("input[name='slope']").val(),
+		  sslope:$("input[name='sslope']").val(),
 		  ],
-		start:$("select[name='start']").val(),
-		end:$("select[name='end']").val(),
+		start:$("input[name='start']").val(),
+		end:$("input[name='end']").val(),
 	  ];
 	  alert(params)
 	}
