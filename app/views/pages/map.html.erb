@@ -122,11 +122,11 @@
 <% content_for :page_javascript do %>
   <script>
 	function ld(){
-	  alert(Document.stop);
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
-	  alert($("#stop").prop('checked'))
-	  alert($("#stop").attr('checked'))
+	  alert($("#stop"));
+	  alert($("#stop").prop('checked'));
+	  alert($("#stop").attr('checked'));
 	  //var temp = $("input[name='stop']").val(),
 	  //var params:[
 	  //  source:$("select[name='source']").val(),
