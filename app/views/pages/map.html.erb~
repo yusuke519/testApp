@@ -130,7 +130,7 @@
 	  if($("#stop").is("checked")){
 		alert("Checked");
 		}else{
-
+		alert("UnChecked");
 	  }
 
 	  
