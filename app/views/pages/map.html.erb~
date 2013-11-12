@@ -73,8 +73,8 @@
 				  </div>
 				  <label for="side_slope" class="col-sm-3 control-label">Side Slope</label>
 				  <div class="col-sm-3">
-					  <div class="make-switch" data-on="danger" id="side_slope">
-						  <input name="side slope" type="checkbox" checked>
+					  <div class="make-switch" data-on="danger" id="sslope">
+						  <input name="sslope" type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
@@ -125,11 +125,18 @@
 	  alert(Document.stop);
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
-	  var params{
+	  var params:[
 		source:$("select[name='source']").val(),
 		stop:$("select[name='stop']").val(),
-
-	  };
+		filter{
+		  stop:$("select[name='stop']").val(),
+		  bump:$("select[name='bump']").val(),
+		  slope:$("select[name='slope']").val(),
+		  sslope:$("select[name='sslope']").val(),
+		},
+		start:$("select[name='start']").val(),
+		end:$("select[name='end']").val(),
+	  ];
 	  alert(params)
 	}
   </script>
