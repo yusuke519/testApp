@@ -48,19 +48,19 @@
         <h4 class="modal-title" id="filterModalLabel">Filter</h4>
       </div>
 	  <div class="modal-body">
-		  <form class="form-horizontal" role="form">
+		  <form class="form-horizontal" accept-charset="UTF-8" action="/pages/map/load" role="form">
 			  <h4>Type</h4>
 			  <div class="form-group">
 				  <label for="stop" class="col-sm-3 control-label">Stop</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="stop">
-						  <input type="checkbox" checked>
+						  <input name="stop" type="checkbox" checked>
 					  </div>
 				  </div>
 				  <label for="bump" class="col-sm-3 control-label">Bump</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="bump">
-						  <input type="checkbox" checked>
+						  <input name="bump" type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
@@ -68,13 +68,13 @@
 				  <label for="slope" class="col-sm-3 control-label">Slope</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="slope">
-						  <input type="checkbox" checked>
+						  <input name="slope" type="checkbox" checked>
 					  </div>
 				  </div>
 				  <label for="side_slope" class="col-sm-3 control-label">Side Slope</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="side_slope">
-						  <input type="checkbox" checked>
+						  <input name="side slope" type="checkbox" checked>
 					  </div>
 				  </div>
 			  </div>
@@ -82,7 +82,7 @@
 			  <div class="form-group">
 				  <label for="user" class="col-sm-3 control-label"> User </label>
 				  <div class="col-sm-9" id="user">
-					  <select class="form-control">
+					  <select name="source" class="form-control">
 						  <option>All User</option>
 						  <option>You</option>
 					  </select>
@@ -107,11 +107,6 @@
 					  <input type="text" class="input-small" name="start" />
 					  <span class="add-on">to</span>
 					  <input type="text" class="input-small" name="end" />
-				  </div>
-				  <div class="input-daterange">
-					  <input value="2012-04-05" />
-					  <span class="add-on">to</span>
-					  <input value="2012-04-07" />
 				  </div>
 			  </div>
 

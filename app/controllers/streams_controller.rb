@@ -44,10 +44,6 @@ class StreamsController < ApplicationController
 	end 
 
 	def create
-		params[:from_lat] = params[:from_lat].to_f
-		params[:from_lng] = params[:from_lng].to_f
-		params[:to_lat] = params[:to_lat].to_f
-		params[:to_lng] = params[:to_lng].to_f
 		@user = User.find(params[:user_id])
 		@stream = @user.streams.create()
 		if @stream.save
@@ -59,6 +55,10 @@ class StreamsController < ApplicationController
 
 	def set_data
 		stream = Stream.find(params[:stream_id])
+		params[:from_lat] = params[:from_lat].to_f
+		params[:from_lng] = params[:from_lng].to_f
+		params[:to_lat] = params[:to_lat].to_f
+		params[:to_lng] = params[:to_lng].to_f
 		@data_point = stream.data_points.create(data_point_param)
 		if @data_point.save
 			addAcce(@data_point, params[:data])
@@ -196,6 +196,6 @@ class StreamsController < ApplicationController
 	end
 
 	def data_point_param
-		params.permit(:start_time, :stop_time, :data_typ, :from_lat)
+		params.permit(:start_time, :stop_time, :data_typ, :from_lat, :from_lng, :to_lat, :to_lng)
 	end
 end
