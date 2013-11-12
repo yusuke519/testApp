@@ -54,7 +54,7 @@
 				  <label for="stop" class="col-sm-3 control-label">Stop</label>
 				  <div class="col-sm-3">
 					  <div class="make-switch" data-on="danger" id="stop">
-						  <input id="stop" name="stop" checked>
+						  <input id="stopC" name="stop" checked>
 					  </div>
 				  </div>
 				  <label for="bump" class="col-sm-3 control-label">Bump</label>
@@ -124,14 +124,8 @@
 	function ld(){
 	  val1 = $("select[name='source']").val();
 	  alert(val1);
-	  alert($("#stop"));
-	  alert($("#stop").prop('checked'));
-	  alert($("#stop").attr('checked'));
-	  if($("#stop").is("checked")){
-		alert("Checked");
-		}else{
-		alert("UnChecked");
-	  }
+	  alert($("#stopC").prop('checked'));
+	  alert($("#stopC").attr('checked'));
 
 	  
 	  //var temp = $("input[name='stop']").val(),
