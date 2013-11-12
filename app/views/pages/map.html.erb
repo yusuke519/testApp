@@ -119,8 +119,12 @@
 </div><!-- /.modal -->
 
 
-<script>
-  function ld(){
-	alert(Document.stop);
-  }
-</script>
+<% content_for :page_javascript do %>
+  <script>
+	function ld(){
+	  alert(Document.stop);
+	  val1 = $("select[name='source']").val();
+	  alert(val1);
+	}
+  </script>
+<% end %>

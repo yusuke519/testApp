@@ -121,6 +121,8 @@
 
 <script>
   function ld(){
-	alert("Success");
+	alert(Document.stop);
+	val1 = $("select[name='source']").val();
+	alert(val1);
   }
 </script>
