@@ -128,12 +128,12 @@
 	  var params:[
 		source:$("select[name='source']").val(),
 		stop:$("select[name='stop']").val(),
-		filter{
+		filter:[
 		  stop:$("select[name='stop']").val(),
 		  bump:$("select[name='bump']").val(),
 		  slope:$("select[name='slope']").val(),
 		  sslope:$("select[name='sslope']").val(),
-		},
+		  ],
 		start:$("select[name='start']").val(),
 		end:$("select[name='end']").val(),
 	  ];
