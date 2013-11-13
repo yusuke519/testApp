@@ -68,7 +68,7 @@
 			alert(gon.x.length)
 			alert(gon.y.length)
 			alert(gon.z.length)
-			alert(gon.x.length)
+			alert(gon.t.length)
 			var data = {
 				labels : gon.t,
 				datasets : [
@@ -77,21 +77,21 @@
 					strokeColor : "rgba(123,150,221,1)",
 					pointColor : "rgba(220,220,220,1)",
 					pointStrokeColor : "#fff",
-					data : gon.x
+					data : gon.x.slice(0,100)
 				},
 				{
 					fillColor : "rgba(220,220,220,0.5)",
 					strokeColor : "rgba(226,149,21,1)",
 					pointColor : "rgba(220,220,220,1)",
 					pointStrokeColor : "#fff",
-					data : gon.y
+					data : gon.y.slice(0,100)
 				},
 				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(228,97,69,1)",
 					pointColor : "rgba(151,187,205,1)",
 					pointStrokeColor : "#fff",
-					data : gon.z
+					data : gon.z.slice(0,100)
 				}
 				] 
 			} 
