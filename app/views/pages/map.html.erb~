@@ -128,6 +128,7 @@
 	  
 	  var testValues = {
 	    source:$("select[name='source']").val(),
+	    stop:$("#stopC").prop('checked')),
 	    //filter:[
 	    //  stop:$("input[name='stop']").val(),
 	    //  bump:$("input[name='bump']").val(),
