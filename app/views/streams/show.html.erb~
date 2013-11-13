@@ -64,7 +64,11 @@
 <% content_for :page_javascript do %>
 	<%= javascript_include_tag "Chart" %>
 	<script>
-		$(document).ready(function(){
+	  $(document).ready(function(){
+			alert(gon.x.length)
+			alert(gon.y.length)
+			alert(gon.z.length)
+			alert(gon.x.length)
 			var data = {
 				labels : gon.t,
 				datasets : [
