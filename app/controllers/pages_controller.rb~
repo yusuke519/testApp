@@ -34,7 +34,6 @@ class PagesController < ApplicationController
 			end
 
 			#3重にしたらさすがに読み込み結構時間かかる．
-			#N+1問題
 			ress = Array.new()
 			@streams.each{|s|
 				s.data_points.each{|dp|

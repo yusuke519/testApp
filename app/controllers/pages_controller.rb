@@ -32,7 +32,7 @@ class PagesController < ApplicationController
 			else
 				#        @streams = Stream.find(data_source.to_i)
 			end
-			binding.pry
+
 			#3重にしたらさすがに読み込み結構時間かかる．
 			#N+1問題
 			ress = Array.new()
