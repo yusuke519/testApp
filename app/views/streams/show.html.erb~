@@ -70,7 +70,7 @@
 			alert(gon.z.length)
 			alert(gon.t.length)
 			var data = {
-				labels : gon.t,
+				labels : gon.t.slice(0,1000),
 				datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
