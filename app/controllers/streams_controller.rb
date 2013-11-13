@@ -23,7 +23,7 @@ class StreamsController < ApplicationController
 
 		firstTime = 0
 		gon.test = 'NG'
-		firstTime = @dataPoints.first.time.to_i
+		firstTime = @dataPoints.first.accelerations.first.time.to_i
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
 			firstAcce = @acces[0]

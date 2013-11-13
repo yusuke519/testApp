@@ -27,7 +27,6 @@ class StreamsController < ApplicationController
 		@dataPoints.each{|dp|
 			@acces = dp.accelerations
 			firstAcce = @acces[0]
-			firstTime = firstAcce.time.to_i
 			@acces.each{|acce|
 				x << acce.x
 				y << acce.y
