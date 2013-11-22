@@ -230,7 +230,5 @@ window.onload = function() {
 };
 
 function setDatePicker(){
-	var datepicker = $.fn.datepicker.noConflict(); // return $.fn.datepicker to previously assigned value
-	$.fn.bootstrapDP = datepicker;                 // give $().bootstrapDP the bootstrap-datepicker functionality
 	$('.input-daterange').datepicker('show');
 }
